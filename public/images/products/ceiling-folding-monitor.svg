@@ -1,0 +1,17 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(22, 36, 66, 0.95)" />
+      <stop offset="100%" stop-color="rgba(9, 41, 74, 0.7)" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#grad)" rx="32" />
+  <rect x="40" y="40" width="560" height="280" rx="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  <circle cx="540" cy="80" r="26" stroke="rgba(255,255,255,0.35)" stroke-width="2" fill="none" />
+  <circle cx="540" cy="80" r="18" stroke="rgba(255,255,255,0.45)" stroke-width="2" fill="none" />
+  <line x1="520" y1="80" x2="560" y2="80" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" />
+  <g font-family="Albert Sans, 'Pretendard', 'Inter', sans-serif" fill="#FFFFFF" text-anchor="start">
+    <text x="70" y="160" font-size="28" font-weight="600" opacity="0.85">Product Placeholder</text>
+    <text x="70" y="210" font-size="48" font-weight="700">천장형 폴딩타입 모니터 (승합+상용)</text>
+  </g>
+</svg>

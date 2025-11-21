@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CES 2026 - 3D Model Viewer</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #1a1a1a; font-family: 'Segoe UI', sans-serif; }
+        
+        /* UI 오버레이 */
+        #ui-container {
+            position: absolute;
+            top: 30px; left: 30px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            font-weight: 300;
+            border-left: 4px solid #00eaff;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+        h1 span { font-weight: 700; color: #00eaff; }
+        
+        .desc {
+            color: #aaa;
+            margin-top: 8px;
+            padding-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 드래그 앤 드롭 안내 영역 */
+        #drop-zone {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px dashed #555;
+            padding: 40px;
+            text-align: center;
+            color: #888;
+            background: rgba(0,0,0,0.7);
+            border-radius: 10px;
+            display: flex; /* 기본적으로 표시 */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none; /* 드롭 이벤트는 window에서 처리 */
+            z-index: 5;
+            width: 300px;
+            height: 200px;
+        }
+        #drop-zone.active { border-color: #00eaff; color: #fff; }
+
+        /* 하단 컨트롤 버튼 */
+        .btn-group {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            pointer-events: auto;
+            background: rgba(30, 30, 30, 0.8);
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid #444;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            color: #ccc;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            border-radius: 20px;
+            transition: 0.2s;
+        }
+        button:hover { color: #fff; background: #444; }
+        button.active { background: #fff; color: #000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div id="ui-container">
+        <h1>CES 2026 <span>CIVIC STYLE</span></h1>
+        <div class="desc">Stylized Sedan Concept Showcase</div>
+    </div>
+
+    <!-- 파일 로드 안내 -->
+    <div id="drop-zone">
+        <p style="font-size:1.2rem; margin-bottom:10px; color:#00eaff;">MODEL VIEWER</p>
+        <p>가지고 계신<br><b>.glb 파일</b>을<br>이곳에 드래그하세요.</p>
+    </div>
+
+    <div class="btn-group">
+        <button onclick="moveCamera('iso')" class="active" id="btn-iso">ISO View</button>
+        <button onclick="moveCamera('side')" id="btn-side">Side View</button>
+        <button onclick="moveCamera('front')" id="btn-front">Front View</button>
+        <button onclick="moveCamera('rear')" id="btn-rear">Rear View</button>
+    </div>
+
+    <!-- Three.js Import -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+        // 1. 씬 설정
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x111111);
+        scene.fog = new THREE.Fog(0x111111, 10, 50);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(5, 3, 5);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.shadowMap.enabled = true;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.0;
+        document.body.appendChild(renderer.domElement);
+
+        // 2. 조명 및 환경 (차량 반사광)
+        const pmremGenerator = new THREE.PMREMGenerator(renderer);
+        scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+        scene.add(ambientLight);
+
+        const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
+        dirLight.position.set(5, 10, 5);
+        dirLight.castShadow = true;
+        dirLight.shadow.mapSize.width = 2048;
+        dirLight.shadow.mapSize.height = 2048;
+        scene.add(dirLight);
+        
+        // 하이라이트 조명
+        const spotLight = new THREE.SpotLight(0x00eaff, 5);
+        spotLight.position.set(-5, 5, 0);
+        spotLight.angle = 0.5;
+        spotLight.penumbra = 1;
+        scene.add(spotLight);
+
+        // 3. 바닥 그리드 및 효과
+        const grid = new THREE.GridHelper(20, 20, 0x444444, 0x111111);
+        scene.add(grid);
+
+        const planeGeo = new THREE.PlaneGeometry(50, 50);
+        const planeMat = new THREE.MeshStandardMaterial({ 
+            color: 0x050505, roughness: 0.1, metalness: 0.5 
+        });
+        const floor = new THREE.Mesh(planeGeo, planeMat);
+        floor.rotation.x = -Math.PI / 2;
+        floor.position.y = -0.01;
+        floor.receiveShadow = true;
+        scene.add(floor);
+
+        // 4. 모델 로더
+        const loader = new GLTFLoader();
+        let carModel = null;
+
+        // 모델 로드 및 셋팅 함수
+        function setupModel(gltf) {
+            if (carModel) scene.remove(carModel);
+            
+            carModel = gltf.scene;
+            
+            // 자동 크기 조정 (Fit to Scene)
+            const box = new THREE.Box3().setFromObject(carModel);
+            const size = box.getSize(new THREE.Vector3());
+            const center = box.getCenter(new THREE.Vector3());
+            
+            // 모델을 원점으로 이동
+            carModel.position.x += (carModel.position.x - center.x);
+            carModel.position.y += (carModel.position.y - center.y + size.y/2); // 바닥에 맞춤
+            carModel.position.z += (carModel.position.z - center.z);
+
+            // 스케일 조정 (적당한 크기로)
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const scale = 4.0 / maxDim; 
+            carModel.scale.set(scale, scale, scale);
+
+            // 그림자 및 재질 보정
+            carModel.traverse((child) => {
+                if (child.isMesh) {
+                    child.castShadow = true;
+                    child.receiveShadow = true;
+                    // 금속 재질 강조
+                    if(child.material.map == null) { 
+                        child.material.metalness = 0.8;
+                        child.material.roughness = 0.2;
+                    }
+                }
+            });
+
+            scene.add(carModel);
+            
+            // 드롭존 숨김
+            document.getElementById('drop-zone').style.display = 'none';
+        }
+
+        // A. 자동 로드 제거 (오류 방지)
+        // 대신 사용자가 파일을 드롭하도록 유도합니다.
+
+        // B. 드래그 앤 드롭 기능 추가 (로컬 파일 바로 보기용)
+        window.addEventListener('dragover', (e) => { 
+            e.preventDefault(); 
+            document.getElementById('drop-zone').classList.add('active');
+        }, false);
+        
+        window.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.remove('active');
+        }, false);
+
+        window.addEventListener('drop', (e) => {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.remove('active');
+            
+            const file = e.dataTransfer.files[0];
+            if (file && (file.name.match(/\.glb$/) || file.name.match(/\.gltf$/))) {
+                const url = URL.createObjectURL(file);
+                loader.load(url, (gltf) => {
+                    setupModel(gltf);
+                    URL.revokeObjectURL(url); // 메모리 해제
+                }, undefined, (err) => {
+                    console.error(err);
+                    alert("파일을 로드할 수 없습니다.");
+                });
+            } else {
+                alert("GLB 또는 GLTF 파일만 지원됩니다.");
+            }
+        }, false);
+
+
+        // 5. 컨트롤 및 애니메이션
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.maxPolarAngle = Math.PI / 2 - 0.05; // 바닥 통과 방지
+        controls.target.set(0, 0.5, 0);
+
+        // 카메라 이동
+        let targetPos = new THREE.Vector3(5, 3, 5);
+        let isAnimating = false;
+
+        window.moveCamera = function(view) {
+            document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
+            document.getElementById('btn-' + view).classList.add('active');
+            
+            isAnimating = true;
+            if(view === 'iso') targetPos.set(5, 3, 5);
+            if(view === 'side') targetPos.set(6, 1, 0);
+            if(view === 'front') targetPos.set(0, 1, 6);
+            if(view === 'rear') targetPos.set(-5, 2, -5);
+        };
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if(isAnimating) {
+                camera.position.lerp(targetPos, 0.05);
+                if(camera.position.distanceTo(targetPos) < 0.05) isAnimating = false;
+            }
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,960 @@
+{
+  "products": [
+    {
+      "page": "HvacControlDetail",
+      "title": "CCSP (Genesis GV70) HVAC Controller",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/placeholder.svg",
+        "alt": "HVAC Control Panel"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Haptic"
+            ],
+            "details": [
+              "LCD touch haptic provides precise tactile feedback for intuitive interaction with the climate system."
+            ]
+          },
+          {
+            "labelLines": [
+              "OTA (Over The Air)"
+            ],
+            "details": [
+              "Supports wireless software updates so the controller always runs the latest UI and HVAC logics."
+            ]
+          },
+          {
+            "labelLines": [
+              "Dual / Tri-zone Control"
+            ],
+            "details": [
+              "Independent climate control for the driver, front passenger, and rear seats."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Vehicle Climate System Controller",
+          "description": "Multi-region HVAC controller designed for Genesis GV70 vehicles. Supports domestic, North American, and global market requirements.",
+          "highlight": "Target Regions: Domestic · North America · Others"
+        }
+      ]
+    },
+    {
+      "page": "SevenInchAvDetail",
+      "title": "Stellantis 7\" AV System",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/7-av.png",
+        "alt": "Stellantis 7-inch AV"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Audio & Entertainment"
+            ],
+            "details": [
+              "AM/FM Radio, audio control, AUX input, hands-free communication with echo/noise reduction, Dead Reckoning GPS."
+            ]
+          },
+          {
+            "labelLines": [
+              "Smartphone Integration"
+            ],
+            "details": [
+              "Wired/Wireless Apple CarPlay and Android Auto for seamless phone connectivity."
+            ]
+          },
+          {
+            "labelLines": [
+              "Connectivity & Interface"
+            ],
+            "details": [
+              "Bluetooth, Wi-Fi, and USB for media, charging, and contact sync. Hands-free voice commands with an intuitive touch UI."
+            ]
+          },
+          {
+            "labelLines": [
+              "Certifications"
+            ],
+            "details": [
+              "Complies with AUTOSAR, A-SPICE, and Cyber Security standards for Stellantis LATAM programs."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Connected 7-inch AV Head Unit",
+          "description": "Compact AV platform for Stellantis LATAM vehicles that merges audio, connectivity, and voice-first interactions in a single package.",
+          "highlight": "Target Region: LATAM"
+        }
+      ]
+    },
+    {
+      "page": "TaxiPbvAvntDetail",
+      "title": "Taxi PBV AVNT",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/taxi-pbv-avnt.svg",
+        "alt": "Taxi PBV AVNT"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Purpose-built Interface"
+            ],
+            "details": [
+              "Taxi dedicated AVNT interface tuned for professional drivers."
+            ]
+          },
+          {
+            "labelLines": [
+              "Connected Services"
+            ],
+            "details": [
+              "Supports dispatch, meter integration, and infotainment services tailored for PBV fleets."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "CommercialTruckClusterDetail",
+      "title": "Commercial Truck Cluster",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/commercial-truck-cluster.svg",
+        "alt": "Commercial Truck Cluster"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Optimized UX"
+            ],
+            "details": [
+              "Cluster themes for commercial trucks with localized UI."
+            ]
+          },
+          {
+            "labelLines": [
+              "Durability"
+            ],
+            "details": [
+              "Engineered for harsh vibration and temperature environments."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "PassengerRseDetail",
+      "title": "RSE 2.0 (Rear Seat Entertainment)",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/passenger-rse-2-0.svg",
+        "alt": "RSE 2.0 Display"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Google EDLA Certification"
+            ],
+            "details": [
+              "Android-based automotive infotainment platform, delivering stability and scalability."
+            ]
+          },
+          {
+            "labelLines": [
+              "OTT Content"
+            ],
+            "details": [
+              "Supports Netflix, Disney+, TVing and other OTT services for personalized entertainment."
+            ]
+          },
+          {
+            "labelLines": [
+              "Screen Sharing"
+            ],
+            "details": [
+              "SerDes-based technology enables stable sharing between two RSE displays."
+            ]
+          },
+          {
+            "labelLines": [
+              "External Device Compatibility"
+            ],
+            "details": [
+              "HDMI, USB and other I/O for multi-interface connectivity."
+            ]
+          },
+          {
+            "labelLines": [
+              "Google Package App Support"
+            ],
+            "details": [
+              "Access to Google Play bundle, ensuring an expanding application ecosystem."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "OTT Content-equipped RSE",
+          "description": "Android-based rear seat entertainment concept that delivers cloud OTT services, Google packages, and in-vehicle screen sharing between paired displays.",
+          "highlight": "Target Region: TBD"
+        }
+      ]
+    },
+    {
+      "page": "TrainVodDetail",
+      "title": "RSE (VOD) Monitor",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/train-vod.svg",
+        "alt": "Train VOD Monitor"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "System Architecture"
+            ],
+            "details": [
+              "VOD Server handles VOD, FOTA, NTP, seat number.",
+              "AVC Server handles attendant call and AV streaming.",
+              "Emergency power integration provides blackout mode."
+            ]
+          },
+          {
+            "labelLines": [
+              "Two-Way Service"
+            ],
+            "details": [
+              "Diagnostics, FOTA (A/B update), VOD, attendant call via server connectivity."
+            ]
+          },
+          {
+            "labelLines": [
+              "One-Way Service"
+            ],
+            "details": [
+              "Ethernet: operation info, arrival info, onboard broadcast, seat number.",
+              "Wi-Fi/AP/LTE: YouTube and internet browsing."
+            ]
+          },
+          {
+            "labelLines": [
+              "PoC Service"
+            ],
+            "details": [
+              "Terminal: Miracast, games, BT headset.",
+              "Server: AM, VOD content delivery / update."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "VOD / Operation Information / Attendant Call",
+          "description": "Railway-focused entertainment and operations terminal that links to VOD and AVC servers for diagnostics, attendant calls, and onboard information.",
+          "highlight": "Target Region: Domestic · KTX"
+        }
+      ]
+    },
+    {
+      "page": "CeilingFoldingMonitorDetail",
+      "title": "Display (Staria VIP)",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/ceiling-folding-monitor.svg",
+        "alt": "Ceiling Folding Monitor"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Foldable Display Design"
+            ],
+            "details": [
+              "Folding monitor maximizes cabin space and harmonizes with premium interior.",
+              "Supports multi-angle adjustment for flexible viewing."
+            ],
+            "detailMedia": [
+              {
+                "src": "/images/products/placeholder.svg",
+                "alt": "Folded mode"
+              },
+              {
+                "src": "/images/products/placeholder.svg",
+                "alt": "Unfolded mode"
+              }
+            ]
+          },
+          {
+            "labelLines": [
+              "Dedicated Switches"
+            ],
+            "details": [
+              "POWER, OK, FOLDING, UNFOLDING switches improve usability."
+            ]
+          },
+          {
+            "labelLines": [
+              "High Resolution"
+            ],
+            "details": [
+              "17.3-inch Full HD (1920×1080) panel for a premium VIP experience."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Ceiling-mounted Folding Monitor",
+          "description": "Staria VIP ceiling display that folds away when not in use while providing large-format Full HD visuals controlled through dedicated switches.",
+          "highlight": "Target Region: Domestic"
+        }
+      ]
+    },
+    {
+      "page": "AirPurifierDetail",
+      "title": "Air Purifier (Armrest/Seatback)",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/air-purifier.png",
+        "alt": "Air Purifier"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Diverse Type Built-in Solution"
+            ],
+            "details": [
+              "Front-row Seatback",
+              "Front-row Armrest",
+              "Rear-row Armrest",
+              "Console back side"
+            ],
+            "detailMedia": [
+              {
+                "src": "/images/products/placeholder.svg",
+                "alt": "Seatback module"
+              },
+              {
+                "src": "/images/products/placeholder.svg",
+                "alt": "Armrest module"
+              },
+              {
+                "src": "/images/products/placeholder.svg",
+                "alt": "Rear module"
+              },
+              {
+                "src": "/images/products/placeholder.svg",
+                "alt": "Console module"
+              }
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Air Purification & Sterilization Module",
+          "description": "Seatback and armrest form factors that purify, sterilize, and display AQI data while integrating user convenience hardware.",
+          "highlight": "Target Region: India"
+        },
+        {
+          "type": "text",
+          "title": "Slim Structural Design",
+          "description": "Design to minimize rear passenger knee interference through air-flow simulation and structural analysis.",
+          "highlight": "40% decreased protrusion (55mm → 30mm)"
+        },
+        {
+          "type": "comparison",
+          "title": "기존(55mm) vs NEW(30mm)",
+          "items": [
+            {
+              "src": "/images/products/placeholder.svg",
+              "alt": "기존 55mm",
+              "caption": "기존 (55mm)"
+            },
+            {
+              "src": "/images/products/placeholder.svg",
+              "alt": "NEW 30mm",
+              "caption": "NEW (30mm)"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "title": "Integration of User Convenience Solutions",
+          "columns": [
+            [
+              "Dust Sensor",
+              "USB-PD (45W/12V)",
+              "Diffuser"
+            ],
+            [
+              "GAS Sensor (CO2/VOC)",
+              "Temperature / Humidity Sensor",
+              "Rear Passenger Monitoring Camera"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "page": "DsmDetail",
+      "title": "Driver Status Monitoring",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/dsm.svg",
+        "alt": "Driver Status Monitoring"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Face Recognition"
+            ],
+            "details": [
+              "Identifies the driver across different lighting / expression conditions with IR liveness detection."
+            ]
+          },
+          {
+            "labelLines": [
+              "Driver Gaze Tracking"
+            ],
+            "details": [
+              "Monitors gaze direction relative to head position for forward-viewing behavior."
+            ]
+          },
+          {
+            "labelLines": [
+              "Drowsiness Detection"
+            ],
+            "details": [
+              "Tracks eye-closure patterns to detect drowsiness in real time."
+            ]
+          },
+          {
+            "labelLines": [
+              "Voice Recognition"
+            ],
+            "details": [
+              "Supports multilingual recognition powered by OpenAI Whisper."
+            ]
+          },
+          {
+            "labelLines": [
+              "AI Chatbot"
+            ],
+            "details": [
+              "Lightweight Google Gemma-based chatbot enables conversational assistance."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Driver Status Monitoring Technology",
+          "description": "Full software stack that combines IR sensing, AI-based gaze tracking, and conversational UX to elevate driver safety.",
+          "highlight": "Target Region: Global (ALL)"
+        }
+      ]
+    },
+    {
+      "page": "SeedsDetail",
+      "title": "SEEDs – Seeing Eye Driving System",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/seeds.svg",
+        "alt": "SEEDs Vehicle"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Autonomous Driving All-in-One"
+            ],
+            "details": [
+              "Converts standard vehicles into autonomous ones with small modifications using advanced sensors and NVIDIA AGX Orin controller."
+            ]
+          },
+          {
+            "labelLines": [
+              "Operational Efficiency"
+            ],
+            "details": [
+              "Maximizes efficiency for airports, ports, and other specialized environments."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Specialized Vehicle Autonomous Driving Solution",
+          "description": "SEEDs converts existing fleets into autonomous assets with high-performance controllers, redundant safety logic, and adaptive sensor control.",
+          "highlight": "Target Regions: Domestic & Overseas"
+        },
+        {
+          "type": "columns",
+          "title": "Sensor Control & Safety System",
+          "columns": [
+            [
+              "Processes sensor data to perceive surroundings and execute autonomous driving.",
+              "Backup system safely stops the vehicle during errors."
+            ],
+            [
+              "Sensor angle adjustment with motorized control for LiDAR and cameras",
+              "Maintains optimal accuracy per vehicle type / environment."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "page": "AdsPlatformDetail",
+      "title": "Autonomous Driving System Platform",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/placeholder.svg",
+        "alt": "ADS Platform"
+      },
+      "featureTable": {
+        "leftHeader": "Key Specification",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Function"
+            ],
+            "details": [
+              "Integrated HW/SW platform for industrial and logistics vehicles, combining perception, control, and decision modules."
+            ]
+          },
+          {
+            "labelLines": [
+              "Processor / MCU"
+            ],
+            "details": [
+              "NVIDIA Jetson AGX Orin SOM, Infineon Aurix MCU, ASIL-level safety per ISO."
+            ]
+          },
+          {
+            "labelLines": [
+              "Networking"
+            ],
+            "details": [
+              "1GbE ×3, 10GbE ×1, internal Orin SOM–MCU comms without external wiring."
+            ]
+          },
+          {
+            "labelLines": [
+              "External Peripheral"
+            ],
+            "details": [
+              "USB-A Host, USB-A Download, USB-C, UART, CAN FD ×10CH."
+            ]
+          },
+          {
+            "labelLines": [
+              "Car I/O"
+            ],
+            "details": [
+              "12V power input, ACC ON, external GPS, emergency input, etc."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Industrial Autonomous Driving Platform",
+          "description": "Open AI computing skateboard that integrates perception, control, and decision modules for logistics and industrial vehicles.",
+          "highlight": "Project: Industrial Autonomous Driving & Stability Securing"
+        }
+      ]
+    },
+    {
+      "page": "DashcamDetail",
+      "title": "Integrated Dashcam",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/dash-cam.svg",
+        "alt": "Dashcam"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "AV/AVN Connectivity"
+            ],
+            "details": [
+              "Wi-Fi pairing enables real-time viewing and easier configuration."
+            ]
+          },
+          {
+            "labelLines": [
+              "HDR"
+            ],
+            "details": [
+              "Multi-exposure blending provides clear video in high-contrast environments."
+            ]
+          },
+          {
+            "labelLines": [
+              "Protection"
+            ],
+            "details": [
+              "Battery protection and temperature cut-off guard against extreme conditions."
+            ]
+          },
+          {
+            "labelLines": [
+              "Timelapse / Hyperlapse"
+            ],
+            "details": [
+              "Compressed recording for extended parking surveillance."
+            ]
+          },
+          {
+            "labelLines": [
+              "Auto Night Vision"
+            ],
+            "details": [
+              "Optimizes gain and reduces noise for clear night footage."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "AV/AVN-integrated Dashcam",
+          "description": "Connected dashcam designed to sync with vehicle infotainment, provide HDR recording, and protect itself against thermal extremes.",
+          "highlight": "Target Region: Universal"
+        }
+      ]
+    },
+    {
+      "page": "ClusterDetail",
+      "title": "Digital Cluster",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/placeholder.svg",
+        "alt": "Digital Cluster"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Customizable UI"
+            ],
+            "details": [
+              "Themes adapt to driving modes (Eco/Sport/Comfort) or driver preferences."
+            ]
+          },
+          {
+            "labelLines": [
+              "Integrated Information"
+            ],
+            "details": [
+              "Displays navigation, media, phone, and warnings."
+            ]
+          },
+          {
+            "labelLines": [
+              "Graphics & Resolution"
+            ],
+            "details": [
+              "High-resolution 3D animations with automatic day/night control."
+            ]
+          },
+          {
+            "labelLines": [
+              "Virtual Gauge Designs"
+            ],
+            "details": [
+              "Analog, sport, and futuristic digital themes."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Digital Type Cluster",
+          "description": "High-resolution display cluster that adapts UI themes, aggregates vehicle data, and keeps graphics legible via automatic brightness control.",
+          "highlight": "Target Region: Domestic"
+        }
+      ]
+    },
+    {
+      "page": "Mh300lDetail",
+      "title": "MH300L DT23 Taxi PBV IVI",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/mtr.png",
+        "alt": "MH300L"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Kakao Taxi Driver Service"
+            ],
+            "details": [
+              "Drivers accept ride requests directly on IVI, enhancing convenience."
+            ]
+          },
+          {
+            "labelLines": [
+              "TMAP Navigation"
+            ],
+            "details": [
+              "Taxi-optimized IVI navigation with real-time traffic."
+            ]
+          },
+          {
+            "labelLines": [
+              "Taxi Meter Integration"
+            ],
+            "details": [
+              "Digital meter with fare display and card payment integration."
+            ]
+          },
+          {
+            "labelLines": [
+              "42dot Driver Authentication"
+            ],
+            "details": [
+              "OE-level authentication for secure operations."
+            ]
+          },
+          {
+            "labelLines": [
+              "OTT Streaming (HYUNDAI TV+)"
+            ],
+            "details": [
+              "FAST-type streaming for news and entertainment during breaks."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Hyundai Sonata Taxi PBV IVI",
+          "description": "MH300L DT23 consolidates driver authentication, taxi meter functions, TMAP navigation, and OTT streaming for professional taxi fleets.",
+          "highlight": "Target Region: Domestic"
+        }
+      ]
+    },
+    {
+      "page": "EvHomeChargerDetail",
+      "title": "ChargeRex Home Charger",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/ev-home-charger.svg",
+        "alt": "ChargeRex Home Charger"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Load Balancing"
+            ],
+            "details": [
+              "Active load balancing (DSMR compliant) and static modes for safe charging."
+            ]
+          },
+          {
+            "labelLines": [
+              "PV Optimized"
+            ],
+            "details": [
+              "SunSpec-compatible control coordinates with PV systems."
+            ]
+          },
+          {
+            "labelLines": [
+              "Mobile App"
+            ],
+            "details": [
+              "BLE/Wi-Fi support. In-house ChargeRex app on App Store and Google Play."
+            ]
+          },
+          {
+            "labelLines": [
+              "Configuration Support"
+            ],
+            "details": [
+              "Flexible cable/power-line/socket combinations for different markets."
+            ]
+          },
+          {
+            "labelLines": [
+              "Scheduled Charging"
+            ],
+            "details": [
+              "Users can preset charge times for energy savings."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "ChargeRex Slow Charger for Personal Use",
+          "description": "Residential EV charger with PV-optimized controls, flexible configurations, and a connected ChargeRex companion app.",
+          "highlight": "Target Regions: Asia · Middle East · Europe · North America · South America · Australia"
+        }
+      ]
+    },
+    {
+      "page": "PortableChargerDetail",
+      "title": "Portable Charger",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/portable-charger.svg",
+        "alt": "Portable Charger"
+      }
+    },
+    {
+      "page": "Cv1DrtAiAssistantDetail",
+      "title": "CV1-DRT & AI Assistant",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/cv1-drt-ai-assistant.svg",
+        "alt": "CV1-DRT"
+      }
+    },
+    {
+      "page": "InCabinAdventureDetail",
+      "title": "In-Cabin Adventure",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/in-cabin-adventure.svg",
+        "alt": "In-Cabin Adventure"
+      }
+    },
+    {
+      "page": "VisionAiPbvDetail",
+      "title": "Vision AI PBV",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/vision-ai-pbv.svg",
+        "alt": "Vision AI PBV"
+      }
+    },
+    {
+      "page": "MotrexDetail",
+      "title": "MOTREX",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/motrex.png",
+        "alt": "MOTREX Hero"
+      }
+    },
+    {
+      "page": "MotrexEvDetail",
+      "title": "MOTREX EV",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/motrex-ev.png",
+        "alt": "MOTREX EV"
+      }
+    },
+    {
+      "page": "MotrexEfmDetail",
+      "title": "MOTREX efm",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/motrex-efm.png",
+        "alt": "MOTREX efm"
+      }
+    },
+    {
+      "page": "MtrDetail",
+      "title": "MTR",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/mtr.png",
+        "alt": "MTR"
+      }
+    },
+    {
+      "page": "JunjinDetail",
+      "title": "JUNJIN Robotics",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/junjin.png",
+        "alt": "JUNJIN Robotics"
+      }
+    },
+    {
+      "page": "EzCockpitDetail",
+      "title": "EZ Cockpit",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/ez-cockpit.png",
+        "alt": "EZ Cockpit"
+      }
+    },
+    {
+      "page": "NidusDetail",
+      "title": "NIDUS: InCabin Station",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/nidus.png",
+        "alt": "NIDUS Station"
+      }
+    }
+  ]
+}

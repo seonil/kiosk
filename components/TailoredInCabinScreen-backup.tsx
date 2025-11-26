@@ -26,7 +26,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'cockpit',
     title: 'Digital Cockpit',
-    image: '/images/btn-solution7.png',
+    image: 'images/btn-solution7.png',
     description: '완성차급 HUD · Cluster 연동으로 모든 드라이빙 맥락을 한눈에.',
     accent: '#7CD3FF',
     target: { x: -150, y: -40, zoom: 1.18, rotation: -6 }
@@ -34,7 +34,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'rse',
     title: 'Rear Seat Entertainment',
-    image: '/images/btn-solution8.png',
+    image: 'images/btn-solution8.png',
     description: '패밀리와 공유하는 몰입형 시네마, 멀티 스크린 스트리밍.',
     accent: '#F9C9FF',
     target: { x: 180, y: -20, zoom: 1.22, rotation: 5 },
@@ -43,7 +43,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'dsm',
     title: 'Driver Status Monitor',
-    image: '/images/btn-solution3.png',
+    image: 'images/btn-solution3.png',
     description: '시선 · 표정 · 졸음까지 실시간 분석해 안전을 우선하는 모니터링.',
     accent: '#FFDD8B',
     target: { x: -40, y: 60, zoom: 1.3, rotation: -2 },
@@ -52,7 +52,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'ev',
     title: 'EV Charger',
-    image: '/images/btn-solution4.png',
+    image: 'images/btn-solution4.png',
     description: '홈 · 포터블 대응 충전 UX를 디지털로 연결해 거점 간격을 줄입니다.',
     accent: '#6CF7C7',
     target: { x: 230, y: 110, zoom: 1.35, rotation: 8 },
@@ -61,7 +61,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'svm',
     title: 'Surround View Monitoring',
-    image: '/images/btn-solution5.png',
+    image: 'images/btn-solution5.png',
     description: '차량 주변 360°를 스티치해 주차와 협로 진입을 직관적으로 안내.',
     accent: '#8CD8FF',
     target: { x: 0, y: 0, zoom: 1.16, rotation: 0 },
@@ -70,7 +70,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'purifier',
     title: 'Air Purifier',
-    image: '/images/btn-solution6.png',
+    image: 'images/btn-solution6.png',
     description: '미세먼지 · 탈취를 좌석별로 커버하는 맞춤형 청정 플로우.',
     accent: '#A7C8FF',
     target: { x: -210, y: 120, zoom: 1.24, rotation: -4 },
@@ -79,7 +79,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'camera',
     title: 'In-Cabin Camera',
-    image: '/images/btn-solution1.png',
+    image: 'images/btn-solution1.png',
     description: '탑승자 제스처와 포즈를 읽어 인포테인먼트를 손끝처럼 제어.',
     accent: '#FFB6B6',
     target: { x: -10, y: -140, zoom: 1.32, rotation: -3 }
@@ -87,7 +87,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'carpet',
     title: 'Smart Carpet',
-    image: '/images/btn-solution2.png',
+    image: 'images/btn-solution2.png',
     description: '바닥 촉감을 데이터로 읽어 모빌리티 안심 시나리오를 열어갑니다.',
     accent: '#BBFF9E',
     target: { x: 70, y: 170, zoom: 1.28, rotation: 4 }
@@ -209,7 +209,7 @@ const TailoredInCabinScreen: React.FC<{ setPage: (page: Page) => void }> = ({ se
     let toggleTargets: Record<string, THREE.Object3D> = {};
 
     loader.load(
-      '/images/22_civic_sedan_stylized.glb',
+      'images/22_civic_sedan_stylized.glb',
       gltf => {
         model = gltf.scene;
         const box = new THREE.Box3().setFromObject(model);
@@ -471,7 +471,7 @@ const TailoredInCabinScreen: React.FC<{ setPage: (page: Page) => void }> = ({ se
         overflow: 'hidden',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/tailored-bg.png)',
+        backgroundImage: 'url(images/tailored-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

@@ -16,7 +16,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'cockpit',
     title: 'Digital Cockpit',
-    image: '/images/btn-solution7.png',
+    image: 'images/btn-solution7.png',
     description: '',
     accent: '#7CD3FF',
     pageTarget: Page.DigitalCockpitDetail
@@ -24,7 +24,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'dsm',
     title: 'DSM',
-    image: '/images/btn-solution3.png',
+    image: 'images/btn-solution3.png',
     description: '',
     accent: '#FFDD8B',
     pageTarget: Page.DsmSolutionDetail
@@ -32,7 +32,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'svm',
     title: 'SVM',
-    image: '/images/btn-solution5.png',
+    image: 'images/btn-solution5.png',
     description: '',
     accent: '#8CD8FF',
     pageTarget: Page.SvmSolutionDetail
@@ -40,7 +40,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'camera',
     title: 'Dash Cam',
-    image: '/images/btn-solution1.png',
+    image: 'images/btn-solution1.png',
     description: '',
     accent: '#FFB6B6',
     pageTarget: Page.DashCamDetail
@@ -48,7 +48,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'rse',
     title: 'RSE2.5',
-    image: '/images/btn-solution8.png',
+    image: 'images/btn-solution8.png',
     description: '',
     accent: '#F9C9FF',
     pageTarget: Page.Rse25Detail
@@ -56,7 +56,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'ev',
     title: 'EV Charger',
-    image: '/images/btn-solution4.png',
+    image: 'images/btn-solution4.png',
     description: '',
     accent: '#6CF7C7',
     pageTarget: Page.EvChargerDetail
@@ -64,7 +64,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'purifier',
     title: 'Air Purifier',
-    image: '/images/btn-solution6.png',
+    image: 'images/btn-solution6.png',
     description: '',
     accent: '#A7C8FF',
     pageTarget: Page.AirPurifierSolutionDetail
@@ -72,7 +72,7 @@ const SOLUTIONS: Solution[] = [
   {
     id: 'carpet',
     title: 'Smart Carpet',
-    image: '/images/btn-solution2.png',
+    image: 'images/btn-solution2.png',
     description: '',
     accent: '#BBFF9E',
     pageTarget: Page.SmartCarpetDetail
@@ -181,7 +181,7 @@ const TailoredInCabinScreen: React.FC<{ setPage: (page: Page) => void }> = ({ se
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url(/images/solution-btn-n.png)',
+          backgroundImage: 'url(images/solution-btn-n.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.8
@@ -220,7 +220,7 @@ const TailoredInCabinScreen: React.FC<{ setPage: (page: Page) => void }> = ({ se
         overflow: 'hidden',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-incabin.png)',
+        backgroundImage: 'url(images/bg-incabin.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -281,7 +281,7 @@ const TailoredInCabinScreen: React.FC<{ setPage: (page: Page) => void }> = ({ se
 
       {/* Car image in center with animation */}
       <motion.img
-        src="/images/car.png"
+        src="images/car.png"
         alt="Car"
         variants={carVariants}
         animate={isTransitioning ? animationStage : "normal"}

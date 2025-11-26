@@ -94,7 +94,7 @@ const ContactScreen: React.FC<ContactScreenProps> = ({ setPage }) => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/images/contact-bg.png)',
+          backgroundImage: 'url(images/contact-bg.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

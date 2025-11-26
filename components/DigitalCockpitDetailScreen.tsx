@@ -70,7 +70,7 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-digital-cockpit.png)',
+        backgroundImage: 'url(images/bg-digital-cockpit.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -112,7 +112,7 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
       </div>
 
       <img
-        src="/images/digital-cockpit-normalmode.png"
+        src="images/digital-cockpit-normalmode.png"
         alt="Digital Cockpit Normal Mode"
         style={{
           position: 'absolute',
@@ -126,7 +126,7 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
 
       <video
         ref={videoRef}
-        src={isToggleOn ? "/images/showcase-cockpit_bottom.webm" : "/images/showcase-cockpit_top.webm"}
+        src={isToggleOn ? "images/showcase-cockpit_bottom.webm" : "images/showcase-cockpit_top.webm"}
         autoPlay
         muted
         playsInline

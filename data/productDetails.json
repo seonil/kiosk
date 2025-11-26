@@ -5,7 +5,7 @@
       "title": "CCSP (Genesis GV70) HVAC Controller",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/placeholder.svg",
+        "src": "images/products/placeholder.svg",
         "alt": "HVAC Control Panel"
       },
       "featureTable": {
@@ -52,7 +52,7 @@
       "title": "7\" AV System",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/7-av.png",
+        "src": "images/products/7-av.png",
         "alt": "Stellantis 7-inch AV"
       },
       "featureTable": {
@@ -107,7 +107,7 @@
       "title": "Taxi PBV AVNT",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/taxi-pbv-avnt.svg",
+        "src": "images/products/taxi-pbv-avnt.svg",
         "alt": "Taxi PBV AVNT"
       },
       "featureTable": {
@@ -175,7 +175,7 @@
       "title": "Commercial Truck Cluster",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/commercial-truck-cluster.svg",
+        "src": "images/products/commercial-truck-cluster.svg",
         "alt": "Commercial Truck Cluster"
       },
       "featureTable": {
@@ -227,7 +227,7 @@
       "title": "RSE 2.0 (Rear Seat Entertainment)",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/passenger-rse-2-0.svg",
+        "src": "images/products/passenger-rse-2-0.svg",
         "alt": "RSE 2.0 Display"
       },
       "featureTable": {
@@ -290,7 +290,7 @@
       "title": "RSE (VOD) Monitor",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/train-vod.svg",
+        "src": "images/products/train-vod.svg",
         "alt": "Train VOD Monitor"
       },
       "featureTable": {
@@ -349,7 +349,7 @@
       "title": "Display (Staria VIP)",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/ceiling-folding-monitor.svg",
+        "src": "images/products/ceiling-folding-monitor.svg",
         "alt": "Ceiling Folding Monitor"
       },
       "featureTable": {
@@ -366,11 +366,11 @@
             ],
             "detailMedia": [
               {
-                "src": "/images/products/placeholder.svg",
+                "src": "images/products/placeholder.svg",
                 "alt": "Folded mode"
               },
               {
-                "src": "/images/products/placeholder.svg",
+                "src": "images/products/placeholder.svg",
                 "alt": "Unfolded mode"
               }
             ]
@@ -407,7 +407,7 @@
       "title": "HMI Display",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/hmi-display.svg",
+        "src": "images/products/hmi-display.svg",
         "alt": "HMI Display"
       },
       "featureTable": {
@@ -455,7 +455,7 @@
       "title": "Air Purifier (Armrest/Seatback)",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/air-purifier.png",
+        "src": "images/products/air-purifier.png",
         "alt": "Air Purifier"
       },
       "featureTable": {
@@ -474,7 +474,7 @@
             ],
             "detailMedia": [
               {
-                "src": "/images/products/air-purifier-option.png",
+                "src": "images/products/air-purifier-option.png",
                 "alt": "Seatback module"
               }
             ]
@@ -517,7 +517,7 @@
       "title": "Driver Status Monitoring",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/dsm.svg",
+        "src": "images/products/dsm.svg",
         "alt": "Driver Status Monitoring"
       },
       "featureTable": {
@@ -580,7 +580,7 @@
       "title": "SEEDs – Seeing Eye Driving System",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/seeds.svg",
+        "src": "images/products/seeds.svg",
         "alt": "SEEDs Vehicle"
       },
       "featureTable": {
@@ -633,7 +633,7 @@
       "title": "Autonomous Driving System Platform",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/ads-platform.svg",
+        "src": "images/products/ads-platform.svg",
         "alt": "ADS Platform"
       },
       "featureTable": {
@@ -696,7 +696,7 @@
       "title": "Integrated Dashcam",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/dash-cam.svg",
+        "src": "images/products/dash-cam.svg",
         "alt": "Dashcam"
       },
       "featureTable": {
@@ -759,7 +759,7 @@
       "title": "Digital Cluster",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/placeholder.svg",
+        "src": "images/products/placeholder.svg",
         "alt": "Digital Cluster"
       },
       "featureTable": {
@@ -814,7 +814,7 @@
       "title": "MH300L DT23 Taxi PBV IVI",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/mtr.png",
+        "src": "images/products/mtr.png",
         "alt": "MH300L"
       },
       "featureTable": {
@@ -877,7 +877,7 @@
       "title": "ChargeRex Home Charger",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/ev-home-charger.svg",
+        "src": "images/products/ev-home-charger.svg",
         "alt": "ChargeRex Home Charger"
       },
       "featureTable": {
@@ -936,7 +936,7 @@
       "title": "Portable Charger",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/portable-charger.svg",
+        "src": "images/products/portable-charger.svg",
         "alt": "Portable Charger"
       },
       "featureTable": {
@@ -988,7 +988,7 @@
       "title": "CV1-DRT",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/cv1-drt-ai-assistant.svg",
+        "src": "images/products/cv1-drt-ai-assistant.svg",
         "alt": "CV1-DRT"
       }
     },
@@ -997,7 +997,7 @@
       "title": "In-Cabin Adventure",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/in-cabin-adventure.svg",
+        "src": "images/products/in-cabin-adventure.svg",
         "alt": "In-Cabin Adventure"
       },
       "featureTable": {
@@ -1075,7 +1075,7 @@
       "title": "Vision AI PBV",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/vision-ai-pbv.svg",
+        "src": "images/products/vision-ai-pbv.svg",
         "alt": "Vision AI PBV"
       }
     },
@@ -1084,7 +1084,7 @@
       "title": "MOTREX",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/motrex.png",
+        "src": "images/products/motrex.png",
         "alt": "MOTREX Hero"
       }
     },
@@ -1093,7 +1093,7 @@
       "title": "MOTREX EV",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/motrex-ev.png",
+        "src": "images/products/motrex-ev.png",
         "alt": "MOTREX EV"
       }
     },
@@ -1102,7 +1102,7 @@
       "title": "MOTREX efm",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/motrex-efm.png",
+        "src": "images/products/motrex-efm.png",
         "alt": "MOTREX efm"
       }
     },
@@ -1111,7 +1111,7 @@
       "title": "MTR",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/mtr.png",
+        "src": "images/products/mtr.png",
         "alt": "MTR"
       }
     },
@@ -1120,7 +1120,7 @@
       "title": "JUNJIN Robotics",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/junjin.png",
+        "src": "images/products/junjin.png",
         "alt": "JUNJIN Robotics"
       }
     },
@@ -1129,7 +1129,7 @@
       "title": "EZ Cockpit",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/ez-cockpit.png",
+        "src": "images/products/ez-cockpit.png",
         "alt": "EZ Cockpit"
       }
     },
@@ -1138,7 +1138,7 @@
       "title": "NIDUS: InCabin Station",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/nidus.png",
+        "src": "images/products/nidus.png",
         "alt": "NIDUS Station"
       }
     }

@@ -55,38 +55,38 @@ const PRODUCT_DETAIL_PAGE_MAP: Partial<Record<string, Page>> = {
 };
 
 const PRODUCT_IMAGE_MAP: Record<string, string> = {
-  '7" AV': '/images/products/7-av.png',
-  '8" AV': '/images/products/8-av.svg',
-  '10.25" AVN': '/images/products/10-25-avn.png',
-  '12.3" AVN': '/images/products/12-3-avn.svg',
-  'Taxi PBV AVNT': '/images/products/taxi-pbv-avnt.svg',
-  'Logistics PBV AVNT': '/images/products/logistics-pbv-avnt.svg',
-  'Commercial Truck Cluster': '/images/products/commercial-truck-cluster.svg',
-  'E-scooter 7" LCD Cluster': '/images/products/e-scooter-7-lcd-cluster.svg',
-  'E-scooter 7" PMVA Cluster': '/images/products/e-scooter-7-pmva-cluster.svg',
-  'Passenger RSE 2.0': '/images/products/passenger-rse-2-0.svg',
-  'Train VOD': '/images/products/train-vod.svg',
-  'Premium Bus Display': '/images/products/premium-bus-display.svg',
-  'Roof Monitor': '/images/products/roof-monitor.svg',
-  '천장형 폴딩타입 모니터 (승합+상용)': '/images/products/ceiling-folding-monitor.svg',
-  'HMI Display': '/images/products/hmi-display.svg',
-  'Air Purifier': '/images/products/air-purifier.png',
-  'Wireless Charger': '/images/products/wireless-charger.svg',
-  'Rear View Camera': '/images/products/rear-view-camera.svg',
-  'SVM (Surround View Monitor)': '/images/products/svm.svg',
-  DSM: '/images/products/dsm.svg',
-  'Dash Cam': '/images/products/dash-cam.svg',
-  'EV Home Charger': '/images/products/ev-home-charger.svg',
-  'Portable Charger': '/images/products/portable-charger.svg',
-  'CV1-DRT': '/images/products/cv1-drt-ai-assistant.svg',
-  'Smart Police Vehicle': '/images/products/smart-police-vehicle.svg',
-  'SEEDs': '/images/products/seeds.svg',
-  'ADS Platform': '/images/products/ads-platform.svg',
-  'Vision AI PBV': '/images/products/vision-ai-pbv.svg',
-  'In-Cabin Adventure': '/images/products/in-cabin-adventure.svg'
+  '7" AV': 'images/products/7-av.png',
+  '8" AV': 'images/products/8-av.svg',
+  '10.25" AVN': 'images/products/10-25-avn.png',
+  '12.3" AVN': 'images/products/12-3-avn.svg',
+  'Taxi PBV AVNT': 'images/products/taxi-pbv-avnt.svg',
+  'Logistics PBV AVNT': 'images/products/logistics-pbv-avnt.svg',
+  'Commercial Truck Cluster': 'images/products/commercial-truck-cluster.svg',
+  'E-scooter 7" LCD Cluster': 'images/products/e-scooter-7-lcd-cluster.svg',
+  'E-scooter 7" PMVA Cluster': 'images/products/e-scooter-7-pmva-cluster.svg',
+  'Passenger RSE 2.0': 'images/products/passenger-rse-2-0.svg',
+  'Train VOD': 'images/products/train-vod.svg',
+  'Premium Bus Display': 'images/products/premium-bus-display.svg',
+  'Roof Monitor': 'images/products/roof-monitor.svg',
+  '천장형 폴딩타입 모니터 (승합+상용)': 'images/products/ceiling-folding-monitor.svg',
+  'HMI Display': 'images/products/hmi-display.svg',
+  'Air Purifier': 'images/products/air-purifier.png',
+  'Wireless Charger': 'images/products/wireless-charger.svg',
+  'Rear View Camera': 'images/products/rear-view-camera.svg',
+  'SVM (Surround View Monitor)': 'images/products/svm.svg',
+  DSM: 'images/products/dsm.svg',
+  'Dash Cam': 'images/products/dash-cam.svg',
+  'EV Home Charger': 'images/products/ev-home-charger.svg',
+  'Portable Charger': 'images/products/portable-charger.svg',
+  'CV1-DRT': 'images/products/cv1-drt-ai-assistant.svg',
+  'Smart Police Vehicle': 'images/products/smart-police-vehicle.svg',
+  'SEEDs': 'images/products/seeds.svg',
+  'ADS Platform': 'images/products/ads-platform.svg',
+  'Vision AI PBV': 'images/products/vision-ai-pbv.svg',
+  'In-Cabin Adventure': 'images/products/in-cabin-adventure.svg'
 };
 
-const PLACEHOLDER_IMAGE = '/images/products/placeholder.svg';
+const PLACEHOLDER_IMAGE = 'images/products/placeholder.svg';
 
 const getDetailPage = (title: string) => PRODUCT_DETAIL_PAGE_MAP[title];
 const getProductImage = (title: string) => PRODUCT_IMAGE_MAP[title] ?? PLACEHOLDER_IMAGE;
@@ -478,7 +478,7 @@ const InnovationScreen: React.FC<InnovationScreenProps> = ({ setPage }) => {
     <div
       className="relative w-full h-full overflow-hidden"
       style={{
-        backgroundImage: 'url(/images/bg-detail.png)',
+        backgroundImage: 'url(images/bg-detail.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

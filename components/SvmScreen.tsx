@@ -10,7 +10,7 @@ interface SvmScreenProps {
 
 const SvmScreen: React.FC<SvmScreenProps> = ({ setPage }) => {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center p-8 bg-cover bg-center" style={{ backgroundImage: 'url(/images/home-bg.png)' }}>
+    <div className="w-full h-full flex flex-col justify-center items-center p-8 bg-cover bg-center" style={{ backgroundImage: 'url(images/home-bg.png)' }}>
       <div className="absolute inset-0 bg-black/60"></div>
       <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} />
       <div className="text-center relative z-10">

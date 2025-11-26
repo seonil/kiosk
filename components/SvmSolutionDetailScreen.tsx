@@ -13,7 +13,7 @@ const SvmSolutionDetailScreen: React.FC<SvmSolutionDetailScreenProps> = ({ setPa
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-svm.png)',
+        backgroundImage: 'url(images/bg-svm.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

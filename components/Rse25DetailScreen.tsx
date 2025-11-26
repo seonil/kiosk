@@ -39,7 +39,7 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-rse25.png)',
+        backgroundImage: 'url(images/bg-rse25.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -100,7 +100,7 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
         onClick={handleClick}
       >
         <img
-          src="/images/rse-landscape.png"
+          src="images/rse-landscape.png"
           alt="RSE Landscape"
           style={{
             width: '100%',
@@ -148,7 +148,7 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
         )}
         {showPortrait && (
           <img
-            src="/images/rse-portrait.png"
+            src="images/rse-portrait.png"
             alt="RSE Portrait"
             style={{
               position: 'absolute',

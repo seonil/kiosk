@@ -24,42 +24,42 @@ const subsidiaries: SubsidiaryContent[] = [
     title: 'MOTREX Group Overview',
     description: 'MOTREX leads advanced automotive electronics, with affiliated companies including MOTREX EV(EV Charging), MOTREX efm(Interior Materials), MTR (Special Vehicle Conversions), and JUNJIN (Construction Automation). Together, they represent a unified ecosystem for the future of mobility.',
     videoUrl: '/videos/motrex.mp4',
-    buttonImage: '/images/btn-motrex.png'
+    buttonImage: 'images/btn-motrex.png'
   },
   {
     id: 'motrex',
     title: 'MOTREX',
     description: 'Experience EZ-Cockpit, MOTREX\'s next-generation digital cockpit brand that integrates the cluster and center display into one intelligent system - offering a unified visual flow, real-time safety alerts, and an Easy Mode for senior-friendly operation.',
     videoUrl: '/videos/motrex.mp4',
-    buttonImage: '/images/btn-motrex.png'
+    buttonImage: 'images/btn-motrex.png'
   },
   {
     id: 'motrex-ev',
     title: 'MOTREX EV',
     description: 'MOTREX EV provides comprehensive energy solutions for electric vehicles, including advanced charging infrastructure and battery management systems for the future of sustainable mobility.',
     videoUrl: '/videos/motrex-ev.mp4',
-    buttonImage: '/images/btn-motrex-ev.png'
+    buttonImage: 'images/btn-motrex-ev.png'
   },
   {
     id: 'motrex-efm',
     title: 'MOTREX efm',
     description: 'MOTREX efm specializes in high-quality interior materials for automotive applications, combining aesthetic design with functional excellence to create premium in-cabin experiences.',
     videoUrl: '/videos/motrex-efm.mp4',
-    buttonImage: '/images/btn-motrex-efm.png'
+    buttonImage: 'images/btn-motrex-efm.png'
   },
   {
     id: 'mtr',
     title: 'MTR',
     description: 'MTR leads in special vehicle conversion and in-cabin integration, transforming standard vehicles into specialized solutions for various industries and applications.',
     videoUrl: '/videos/mtr.mp4',
-    buttonImage: '/images/btn-mtr.png'
+    buttonImage: 'images/btn-mtr.png'
   },
   {
     id: 'junjin',
     title: 'JUNJIN Robotics',
     description: 'JUNJIN Robotics pioneers construction automation and robotic solutions, revolutionizing the construction industry with advanced autonomous systems and smart machinery.',
     videoUrl: '/videos/junjin.mp4',
-    buttonImage: '/images/btn-junjin.png'
+    buttonImage: 'images/btn-junjin.png'
   }
 ];
 
@@ -102,7 +102,7 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
       style={{
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-detail.png)',
+        backgroundImage: 'url(images/bg-detail.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -131,7 +131,7 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
         }}
       >
         <img
-          src="/images/group-title.png"
+          src="images/group-title.png"
           alt="Why Motrex"
           style={{ width: '100%', height: '100%', objectFit: 'contain' }}
         />

@@ -8,10 +8,10 @@ interface HomeScreenProps {
 
 const HomeScreen: React.FC<HomeScreenProps> = ({ setPage }) => {
   const cards = [
-    { imagePath: '/images/card1.png', page: Page.GroupOverview },
-    { imagePath: '/images/card2.png', page: Page.TailoredInCabin },
-    { imagePath: '/images/card3.png', page: Page.Innovation },
-    { imagePath: '/images/card4.png', page: Page.Contact },
+    { imagePath: 'images/card1.png', page: Page.GroupOverview },
+    { imagePath: 'images/card2.png', page: Page.TailoredInCabin },
+    { imagePath: 'images/card3.png', page: Page.Innovation },
+    { imagePath: 'images/card4.png', page: Page.Contact },
   ];
 
   return (
@@ -20,7 +20,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ setPage }) => {
       style={{
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/home-bg.png)',
+        backgroundImage: 'url(images/home-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -102,7 +102,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ setPage }) => {
         }}
       >
         <img
-          src="/images/logo.png"
+          src="images/logo.png"
           alt="MOTREX CES 2026"
           style={{ height: 'auto', maxWidth: '400px' }}
         />

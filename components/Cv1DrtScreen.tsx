@@ -11,7 +11,7 @@ const Cv1DrtScreen: React.FC<Cv1DrtScreenProps> = ({ setPage }) => {
     <div
       className="w-full h-full flex flex-col justify-center items-center relative"
       style={{
-        backgroundImage: 'url(/images/bg-detail.png)',
+        backgroundImage: 'url(images/bg-detail.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

@@ -279,7 +279,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ setPage, detailPa
     <div
       className="w-full h-full relative overflow-hidden"
       style={{
-        backgroundImage: 'url(/images/bg-detail.png)',
+        backgroundImage: 'url(images/bg-detail.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -289,7 +289,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ setPage, detailPa
       <div className="relative flex flex-col h-full" style={{ paddingTop: '140px', paddingLeft: '90px', paddingRight: '90px', paddingBottom: '40px' }}>
         <div className="flex items-center" style={{ marginLeft: '30px', marginTop: '30px', position: 'relative' }}>
           <img
-            src="/images/title-effect.png"
+            src="images/title-effect.png"
             alt="Title effect"
             style={{
               position: 'absolute',

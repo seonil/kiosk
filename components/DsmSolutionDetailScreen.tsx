@@ -13,7 +13,7 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-dsm.png)',
+        backgroundImage: 'url(images/bg-dsm.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -33,7 +33,7 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
         }}
       >
         <img
-          src="/images/detection.png"
+          src="images/detection.png"
           alt="Detection"
           style={{
             display: 'block',
@@ -45,7 +45,7 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
 
         {/* Camera detection effect image positioned with specific margins */}
         <img
-          src="/images/detection-dsm.png"
+          src="images/detection-dsm.png"
           alt="DSM Detection Camera"
           style={{
             position: 'absolute',
@@ -61,7 +61,7 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
 
       {/* Camera detection effect image positioned with specific margins from screen edges */}
       <img
-        src="/images/detection-dsm.png"
+        src="images/detection-dsm.png"
         alt="DSM Detection Camera"
         style={{
           position: 'absolute',

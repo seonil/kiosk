@@ -13,7 +13,7 @@ const SmartCarpetDetailScreen: React.FC<SmartCarpetDetailScreenProps> = ({ setPa
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-smart-carpet.png)',
+        backgroundImage: 'url(images/bg-smart-carpet.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

@@ -9,8 +9,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ setPage, onBack, variant = 'default' }) => {
-  const backImage = variant === 'white' ? '/images/btn-back-white.png' : '/images/btn-back.png';
-  const homeImage = variant === 'white' ? '/images/btn-home-white.png' : '/images/btn-home.png';
+  const backImage = variant === 'white' ? 'images/btn-back-white.png' : 'images/btn-back.png';
+  const homeImage = variant === 'white' ? 'images/btn-home-white.png' : 'images/btn-home.png';
 
   return (
     <header className="absolute top-0 left-0 right-0 p-8 flex justify-between items-center z-10">

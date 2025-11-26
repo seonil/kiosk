@@ -13,7 +13,7 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-air-purifier.png)',
+        backgroundImage: 'url(images/bg-air-purifier.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

@@ -13,7 +13,7 @@ const DashCamDetailScreen: React.FC<DashCamDetailScreenProps> = ({ setPage }) =>
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(/images/bg-dashcam.png)',
+        backgroundImage: 'url(images/bg-dashcam.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

@@ -6,7 +6,6 @@ import HomeScreen from './components/HomeScreen';
 import GroupOverviewScreen from './components/GroupOverviewScreen';
 import ProductDetailPage from './components/ProductDetailPage';
 import TailoredInCabinScreen from './components/TailoredInCabinScreen';
-import SvmScreen from './components/SvmScreen';
 import InnovationScreen from './components/InnovationScreen';
 import ContactScreen from './components/ContactScreen';
 import Cv1DrtScreen from './components/Cv1DrtScreen';
@@ -45,6 +44,7 @@ const DETAIL_PAGES = new Set<Page>([
   Page.HmiDisplayDetail,
   Page.AirPurifierDetail,
   Page.DsmDetail,
+  Page.SvmDetail,
   Page.AdsPlatformDetail,
   Page.DashcamDetail,
   Page.ClusterDetail,
@@ -121,8 +121,6 @@ const App: React.FC = () => {
         return <GroupOverviewScreen setPage={handleSetPage} />;
       case Page.TailoredInCabin:
         return <TailoredInCabinScreen setPage={handleSetPage} />;
-      case Page.SvmDetail:
-        return <SvmScreen setPage={handleSetPage} />;
       case Page.Cv1DrtAiAssistantDetail:
         return <Cv1DrtScreen setPage={handleSetPage} />;
       case Page.Innovation:

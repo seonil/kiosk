@@ -51,7 +51,7 @@ const PRODUCT_DETAIL_PAGE_MAP: Partial<Record<string, Page>> = {
   'SEEDs': Page.SeedsDetail,
   'ADS Platform': Page.AdsPlatformDetail,
   'In-Cabin Adventure': Page.InCabinAdventureDetail,
-  'SVM (Surround View Monitor)': Page.SvmDetail
+  'SVM': Page.SvmDetail
 };
 
 const PRODUCT_IMAGE_MAP: Record<string, string> = {
@@ -73,7 +73,7 @@ const PRODUCT_IMAGE_MAP: Record<string, string> = {
   'Air Purifier': 'images/products/air-purifier.png',
   'Wireless Charger': 'images/products/wireless-charger.svg',
   'Rear View Camera': 'images/products/rear-view-camera.svg',
-  'SVM (Surround View Monitor)': 'images/products/svm.svg',
+  'SVM': 'images/products/svm.svg',
   DSM: 'images/products/dsm.svg',
   'Dash Cam': 'images/products/dash-cam.svg',
   'EV Home Charger': 'images/products/ev-home-charger.svg',
@@ -83,7 +83,7 @@ const PRODUCT_IMAGE_MAP: Record<string, string> = {
   'SEEDs': 'images/products/seeds.svg',
   'ADS Platform': 'images/products/ads-platform.svg',
   'Vision AI PBV': 'images/products/vision-ai-pbv.svg',
-  'In-Cabin Adventure': 'images/products/in-cabin-adventure.svg'
+  'In-Cabin Adventure': 'images/products/xrbox.png'
 };
 
 const PLACEHOLDER_IMAGE = 'images/products/placeholder.svg';
@@ -159,7 +159,7 @@ const PRODUCT_CATEGORIES: ProductCategory[] = [
       'Comprehensive camera and monitoring products delivering enhanced visibility, safety, and data for any vehicle platform.',
     cards: [
       makeCard('Rear View Camera', 1),
-      makeCard('SVM (Surround View Monitor)', 1),
+      makeCard('SVM', 1),
       makeCard('DSM', 1),
       makeCard('Dash Cam', 1)
     ]

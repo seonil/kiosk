@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Page } from './types';
 import HomeScreen from './components/HomeScreen';
@@ -9,6 +9,7 @@ import TailoredInCabinScreen from './components/TailoredInCabinScreen';
 import SvmScreen from './components/SvmScreen';
 import InnovationScreen from './components/InnovationScreen';
 import ContactScreen from './components/ContactScreen';
+import Cv1DrtScreen from './components/Cv1DrtScreen';
 import {
   auroraPageVariants,
   simpleFadeVariants,
@@ -32,6 +33,7 @@ const DETAIL_PAGES = new Set<Page>([
   Page.PassengerRseDetail,
   Page.TrainVodDetail,
   Page.CeilingFoldingMonitorDetail,
+  Page.HmiDisplayDetail,
   Page.AirPurifierDetail,
   Page.DsmDetail,
   Page.AdsPlatformDetail,
@@ -40,15 +42,16 @@ const DETAIL_PAGES = new Set<Page>([
   Page.Mh300lDetail,
   Page.EvHomeChargerDetail,
   Page.PortableChargerDetail,
-  Page.Cv1DrtAiAssistantDetail,
   Page.SeedsDetail,
-  Page.InCabinAdventureDetail,
-  Page.VisionAiPbvDetail
+  Page.InCabinAdventureDetail
 ]);
 
 const App: React.FC = () => {
   // Track previous page for transition logic
   const prevPageRef = useRef<Page | null>(null);
+
+  // Navigation history stack
+  const historyRef = useRef<Page[]>([]);
 
   // Initialize page from sessionStorage or default to Home
   const [page, setPage] = useState<Page>(() => {
@@ -64,6 +67,29 @@ const App: React.FC = () => {
   // Determine if we should use aurora effect for this transition
   const useAurora = shouldUseAuroraEffect(prevPageRef.current, page);
 
+  // Handle browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (historyRef.current.length > 0) {
+        const previousPage = historyRef.current.pop()!;
+        prevPageRef.current = page;
+        setPage(previousPage);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [page]);
+
+  // Custom setPage wrapper to handle history
+  const handleSetPage = useCallback((newPage: Page) => {
+    if (newPage !== page) {
+      historyRef.current.push(page);
+      window.history.pushState({}, '');
+      setPage(newPage);
+    }
+  }, [page]);
+
   // Save page to sessionStorage and update previous page
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -74,24 +100,26 @@ const App: React.FC = () => {
 
   const renderPage = () => {
     if (DETAIL_PAGES.has(page)) {
-      return <ProductDetailPage setPage={setPage} detailPage={page} />;
+      return <ProductDetailPage setPage={handleSetPage} detailPage={page} />;
     }
 
     switch (page) {
       case Page.Home:
-        return <HomeScreen setPage={setPage} />;
+        return <HomeScreen setPage={handleSetPage} />;
       case Page.GroupOverview:
-        return <GroupOverviewScreen setPage={setPage} />;
+        return <GroupOverviewScreen setPage={handleSetPage} />;
       case Page.TailoredInCabin:
-        return <TailoredInCabinScreen setPage={setPage} />;
+        return <TailoredInCabinScreen setPage={handleSetPage} />;
       case Page.SvmDetail:
-        return <SvmScreen setPage={setPage} />;
+        return <SvmScreen setPage={handleSetPage} />;
+      case Page.Cv1DrtAiAssistantDetail:
+        return <Cv1DrtScreen setPage={handleSetPage} />;
       case Page.Innovation:
-        return <InnovationScreen setPage={setPage} />;
+        return <InnovationScreen setPage={handleSetPage} />;
       case Page.Contact:
-        return <ContactScreen setPage={setPage} />;
+        return <ContactScreen setPage={handleSetPage} />;
       default:
-        return <HomeScreen setPage={setPage} />;
+        return <HomeScreen setPage={handleSetPage} />;
     }
   };
 

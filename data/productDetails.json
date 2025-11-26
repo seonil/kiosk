@@ -43,13 +43,13 @@
           "type": "text",
           "title": "Vehicle Climate System Controller",
           "description": "Multi-region HVAC controller designed for Genesis GV70 vehicles. Supports domestic, North American, and global market requirements.",
-          "highlight": "Target Regions: Domestic · North America · Others"
+          "highlight": ""
         }
       ]
     },
     {
       "page": "SevenInchAvDetail",
-      "title": "Stellantis 7\" AV System",
+      "title": "7\" AV System",
       "background": "#0A1324",
       "heroImage": {
         "src": "/images/products/7-av.png",
@@ -98,7 +98,7 @@
           "type": "text",
           "title": "Connected 7-inch AV Head Unit",
           "description": "Compact AV platform for Stellantis LATAM vehicles that merges audio, connectivity, and voice-first interactions in a single package.",
-          "highlight": "Target Region: LATAM"
+          "highlight": ""
         }
       ]
     },
@@ -116,18 +116,55 @@
         "rows": [
           {
             "labelLines": [
-              "Purpose-built Interface"
+              "Mobility Service Integration"
             ],
             "details": [
-              "Taxi dedicated AVNT interface tuned for professional drivers."
+              "<strong>Customizable platform</strong> for ride-hailing and fleet management services.",
+              "Enables drivers to <strong>accept and manage ride requests directly</strong> through the IVI system.",
+              "Supports <strong>third-party service integration</strong> with flexible API architecture."
             ]
           },
           {
             "labelLines": [
-              "Connected Services"
+              "Fleet-Optimized Navigation"
             ],
             "details": [
-              "Supports dispatch, meter integration, and infotainment services tailored for PBV fleets."
+              "<strong>Real-time traffic analysis</strong> and route optimization tailored for commercial mobility operations.",
+              "<strong>Multi-stop routing capabilities</strong> for efficient passenger pickup and drop-off.",
+              "Integration with <strong>fleet management systems</strong> for improved operational efficiency."
+            ]
+          },
+          {
+            "labelLines": [
+              "Digital Meter & Payment",
+              "Integration"
+            ],
+            "details": [
+              "Fully integrated <strong>digital fare calculation</strong> and display system.",
+              "Supports <strong>multiple payment methods</strong> including card, mobile, and digital wallets.",
+              "<strong>Automated fare reporting</strong> and transaction logging for fleet operators."
+            ]
+          },
+          {
+            "labelLines": [
+              "Driver Authentication &",
+              "Fleet Management"
+            ],
+            "details": [
+              "Secure <strong>OE-level driver authentication</strong> and identity verification.",
+              "<strong>Fleet operator dashboard integration</strong> for vehicle and driver monitoring.",
+              "<strong>Shift management</strong> and performance tracking capabilities."
+            ]
+          },
+          {
+            "labelLines": [
+              "In-Vehicle Entertainment",
+              "& Comfort"
+            ],
+            "details": [
+              "<strong>Streaming service integration</strong> for driver downtime entertainment.",
+              "<strong>Customizable content delivery</strong> based on regional requirements.",
+              "<strong>Multi-zone audio control</strong> for passenger and driver comfort."
             ]
           }
         ]
@@ -147,18 +184,39 @@
         "rows": [
           {
             "labelLines": [
-              "Optimized UX"
+              "Customizable User",
+              "Interface (UI)"
             ],
             "details": [
-              "Cluster themes for commercial trucks with localized UI."
+              "Themes and layouts automatically or manually adapt to driving modes and driver preferences (Eco/Sport/Comfort, etc.)."
             ]
           },
           {
             "labelLines": [
-              "Durability"
+              "Integrated Display of",
+              "Various Information"
             ],
             "details": [
-              "Engineered for harsh vibration and temperature environments."
+              "Consolidates navigation, media, phone, and warning information onto the instrument cluster."
+            ]
+          },
+          {
+            "labelLines": [
+              "Graphic Capabilities",
+              "& Resolution"
+            ],
+            "details": [
+              "Intuitive, high-resolution graphics and 3D animations.",
+              "Visibility is optimized with automatic day/night and brightness control."
+            ]
+          },
+          {
+            "labelLines": [
+              "Diversity in Virtual Gauge",
+              "and Theme Designs"
+            ],
+            "details": [
+              "A variety of selectable virtual gauge designs, including analog, sport, and futuristic digital themes."
             ]
           }
         ]
@@ -223,7 +281,7 @@
           "type": "text",
           "title": "OTT Content-equipped RSE",
           "description": "Android-based rear seat entertainment concept that delivers cloud OTT services, Google packages, and in-vehicle screen sharing between paired displays.",
-          "highlight": "Target Region: TBD"
+          "highlight": ""
         }
       ]
     },
@@ -282,7 +340,7 @@
           "type": "text",
           "title": "VOD / Operation Information / Attendant Call",
           "description": "Railway-focused entertainment and operations terminal that links to VOD and AVC servers for diagnostics, attendant calls, and onboard information.",
-          "highlight": "Target Region: Domestic · KTX"
+          "highlight": ""
         }
       ]
     },
@@ -340,9 +398,48 @@
           "type": "text",
           "title": "Ceiling-mounted Folding Monitor",
           "description": "Staria VIP ceiling display that folds away when not in use while providing large-format Full HD visuals controlled through dedicated switches.",
-          "highlight": "Target Region: Domestic"
+          "highlight": ""
         }
       ]
+    },
+    {
+      "page": "HmiDisplayDetail",
+      "title": "HMI Display",
+      "background": "#0A1324",
+      "heroImage": {
+        "src": "/images/products/hmi-display.svg",
+        "alt": "HMI Display"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Haptic"
+            ],
+            "details": [
+              "Provides precise tactile feedback through LCD touch haptic functionality, delivering a more intuitive and responsive user experience."
+            ]
+          },
+          {
+            "labelLines": [
+              "OTA (Over The Air)"
+            ],
+            "details": [
+              "Enables software updates via wireless networks."
+            ]
+          },
+          {
+            "labelLines": [
+              "Dual, Tri-zone Control"
+            ],
+            "details": [
+              "Allows independent climate control for the driver, front passenger, and rear seats."
+            ]
+          }
+        ]
+      }
     },
     {
       "page": "AirPurifierDetail",
@@ -368,20 +465,8 @@
             ],
             "detailMedia": [
               {
-                "src": "/images/products/placeholder.svg",
+                "src": "/images/products/air-purifier-option.png",
                 "alt": "Seatback module"
-              },
-              {
-                "src": "/images/products/placeholder.svg",
-                "alt": "Armrest module"
-              },
-              {
-                "src": "/images/products/placeholder.svg",
-                "alt": "Rear module"
-              },
-              {
-                "src": "/images/products/placeholder.svg",
-                "alt": "Console module"
               }
             ]
           }
@@ -392,29 +477,13 @@
           "type": "text",
           "title": "Air Purification & Sterilization Module",
           "description": "Seatback and armrest form factors that purify, sterilize, and display AQI data while integrating user convenience hardware.",
-          "highlight": "Target Region: India"
+          "highlight": ""
         },
         {
           "type": "text",
           "title": "Slim Structural Design",
           "description": "Design to minimize rear passenger knee interference through air-flow simulation and structural analysis.",
-          "highlight": "40% decreased protrusion (55mm → 30mm)"
-        },
-        {
-          "type": "comparison",
-          "title": "기존(55mm) vs NEW(30mm)",
-          "items": [
-            {
-              "src": "/images/products/placeholder.svg",
-              "alt": "기존 55mm",
-              "caption": "기존 (55mm)"
-            },
-            {
-              "src": "/images/products/placeholder.svg",
-              "alt": "NEW 30mm",
-              "caption": "NEW (30mm)"
-            }
-          ]
+          "highlight": ""
         },
         {
           "type": "columns",
@@ -493,7 +562,7 @@
           "type": "text",
           "title": "Driver Status Monitoring Technology",
           "description": "Full software stack that combines IR sensing, AI-based gaze tracking, and conversational UX to elevate driver safety.",
-          "highlight": "Target Region: Global (ALL)"
+          "highlight": ""
         }
       ]
     },
@@ -532,7 +601,7 @@
           "type": "text",
           "title": "Specialized Vehicle Autonomous Driving Solution",
           "description": "SEEDs converts existing fleets into autonomous assets with high-performance controllers, redundant safety logic, and adaptive sensor control.",
-          "highlight": "Target Regions: Domestic & Overseas"
+          "highlight": ""
         },
         {
           "type": "columns",
@@ -555,7 +624,7 @@
       "title": "Autonomous Driving System Platform",
       "background": "#0A1324",
       "heroImage": {
-        "src": "/images/products/placeholder.svg",
+        "src": "/images/products/ads-platform.svg",
         "alt": "ADS Platform"
       },
       "featureTable": {
@@ -672,7 +741,7 @@
           "type": "text",
           "title": "AV/AVN-integrated Dashcam",
           "description": "Connected dashcam designed to sync with vehicle infotainment, provide HDR recording, and protect itself against thermal extremes.",
-          "highlight": "Target Region: Universal"
+          "highlight": ""
         }
       ]
     },
@@ -727,7 +796,7 @@
           "type": "text",
           "title": "Digital Type Cluster",
           "description": "High-resolution display cluster that adapts UI themes, aggregates vehicle data, and keeps graphics legible via automatic brightness control.",
-          "highlight": "Target Region: Domestic"
+          "highlight": ""
         }
       ]
     },
@@ -790,7 +859,7 @@
           "type": "text",
           "title": "Hyundai Sonata Taxi PBV IVI",
           "description": "MH300L DT23 consolidates driver authentication, taxi meter functions, TMAP navigation, and OTT streaming for professional taxi fleets.",
-          "highlight": "Target Region: Domestic"
+          "highlight": ""
         }
       ]
     },
@@ -808,18 +877,38 @@
         "rows": [
           {
             "labelLines": [
-              "Load Balancing"
+              "Power Output Options"
             ],
             "details": [
-              "Active load balancing (DSMR compliant) and static modes for safe charging."
+              "7kW: 220V × 32A (Single Phase)",
+              "12kW: 240V × 50A (Single Phase)",
+              "22kW: 220V × 32A (3 Phase)"
             ]
           },
           {
             "labelLines": [
-              "PV Optimized"
+              "Connector Options"
             ],
             "details": [
-              "SunSpec-compatible control coordinates with PV systems."
+              "Type 1 (SAE J1772): Common in North America",
+              "Type 2 (IEC 62196): Standard in Europe",
+              "NACS: Emerging standard for Tesla and other EVs"
+            ]
+          },
+          {
+            "labelLines": [
+              "Fully Connected"
+            ],
+            "details": [
+              "Mobile App Control and Cloud Server Integration for smart charging management."
+            ]
+          },
+          {
+            "labelLines": [
+              "Load Balancing"
+            ],
+            "details": [
+              "Active load balancing (DSMR compliant) and static modes for safe charging."
             ]
           },
           {
@@ -829,33 +918,9 @@
             "details": [
               "BLE/Wi-Fi support. In-house ChargeRex app on App Store and Google Play."
             ]
-          },
-          {
-            "labelLines": [
-              "Configuration Support"
-            ],
-            "details": [
-              "Flexible cable/power-line/socket combinations for different markets."
-            ]
-          },
-          {
-            "labelLines": [
-              "Scheduled Charging"
-            ],
-            "details": [
-              "Users can preset charge times for energy savings."
-            ]
           }
         ]
-      },
-      "sections": [
-        {
-          "type": "text",
-          "title": "ChargeRex Slow Charger for Personal Use",
-          "description": "Residential EV charger with PV-optimized controls, flexible configurations, and a connected ChargeRex companion app.",
-          "highlight": "Target Regions: Asia · Middle East · Europe · North America · South America · Australia"
-        }
-      ]
+      }
     },
     {
       "page": "PortableChargerDetail",
@@ -864,11 +929,54 @@
       "heroImage": {
         "src": "/images/products/portable-charger.svg",
         "alt": "Portable Charger"
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "Power Output Modes"
+            ],
+            "details": [
+              "3.5kW: 220V × 16A",
+              "2.9kW: 220V × 13A",
+              "2.2kW: 220V × 10A"
+            ]
+          },
+          {
+            "labelLines": [
+              "Connector Options"
+            ],
+            "details": [
+              "Type 1 (SAE J1772): Common in North America",
+              "Type 2 (IEC 62196): Standard in Europe",
+              "NACS: Emerging standard for Tesla and other EVs"
+            ]
+          },
+          
+          {
+            "labelLines": [
+              "Multi-Layer Protection"
+            ],
+            "details": [
+              "Overcurrent, overvoltage/undervoltage, and leakage current protection for comprehensive safety."
+            ]
+          },
+          {
+            "labelLines": [
+              "User-Friendly Handle Design"
+            ],
+            "details": [
+              "Ergonomic handle for easy portability and convenient handling."
+            ]
+          }
+        ]
       }
     },
     {
       "page": "Cv1DrtAiAssistantDetail",
-      "title": "CV1-DRT & AI Assistant",
+      "title": "CV1-DRT",
       "background": "#0A1324",
       "heroImage": {
         "src": "/images/products/cv1-drt-ai-assistant.svg",
@@ -882,7 +990,76 @@
       "heroImage": {
         "src": "/images/products/in-cabin-adventure.svg",
         "alt": "In-Cabin Adventure"
-      }
+      },
+      "featureTable": {
+        "leftHeader": "Feature",
+        "rightHeader": "Details",
+        "rows": [
+          {
+            "labelLines": [
+              "XR Platform Integration"
+            ],
+            "details": [
+              "<strong>CAN network synchronization</strong> for real-time vehicle data integration",
+              "<strong>VR/AR compatibility</strong> with next-gen headset support",
+              "Seamless transition between AR and VR environments"
+            ]
+          },
+          {
+            "labelLines": [
+              "Real-Time Vehicle",
+              "Synchronization"
+            ],
+            "details": [
+              "Vehicle speed, GPS, and <strong>acceleration data</strong> integrated into XR experiences",
+              "Dynamic content adaptation based on <strong>driving conditions</strong>",
+              "Multi-sensor fusion for enhanced immersion"
+            ]
+          },
+          {
+            "labelLines": [
+              "Safety & User Experience"
+            ],
+            "details": [
+              "<strong>Automatic safety protocols</strong> triggered by vehicle alerts",
+              "<strong>Anti-motion sickness technology</strong> for comfortable extended use",
+              "Emergency override systems for driver intervention"
+            ]
+          },
+          {
+            "labelLines": [
+              "Interactive Design"
+            ],
+            "details": [
+              "<strong>Ergonomic accessibility</strong> with intuitive touch controls",
+              "<strong>Interactive edge lighting</strong> for ambient feedback",
+              "Universal mounting compatibility for various vehicle types"
+            ]
+          },
+          {
+            "labelLines": [
+              "In-Vehicle Control"
+            ],
+            "details": [
+              "<strong>Real-time vehicle function control</strong> through VR interface",
+              "Climate control, entertainment, and navigation integration",
+              "Voice command support with gesture recognition"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "type": "text",
+          "title": "Revolutionary In-Vehicle XR Experience",
+          "description": "In-Cabin Adventure is the world's first in-vehicle XR game box designed specifically for electric and autonomous vehicles. This groundbreaking platform transforms your vehicle into an immersive entertainment hub by synchronizing real-time vehicle data with cutting-edge AR/VR environments. Experience unparalleled gaming and interactive content that adapts dynamically to your journey, all while maintaining the highest safety standards."
+        },
+        {
+          "type": "text",
+          "title": "Innovation Meets Safety",
+          "description": "Built with advanced anti-motion sickness technology and automatic safety protocols, In-Cabin Adventure ensures a comfortable and secure experience for all passengers. The system seamlessly integrates with vehicle controls, allowing users to manage climate, entertainment, and navigation functions directly through the XR interface. With support for next-generation VR headsets and universal vehicle compatibility, this platform sets a new benchmark for in-vehicle entertainment in the age of autonomous driving."
+        }
+      ]
     },
     {
       "page": "VisionAiPbvDetail",

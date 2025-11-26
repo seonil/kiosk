@@ -41,15 +41,15 @@ const PRODUCT_DETAIL_PAGE_MAP: Partial<Record<string, Page>> = {
   'Train VOD': Page.TrainVodDetail,
   'Roof Monitor': Page.CeilingFoldingMonitorDetail,
   '천장형 폴딩타입 모니터 (승합+상용)': Page.CeilingFoldingMonitorDetail,
+  'HMI Display': Page.HmiDisplayDetail,
   'Air Purifier': Page.AirPurifierDetail,
   DSM: Page.DsmDetail,
   'Dash Cam': Page.DashcamDetail,
   'EV Home Charger': Page.EvHomeChargerDetail,
   'Portable Charger': Page.PortableChargerDetail,
-  'CV1-DRT & AI Assistant': Page.Cv1DrtAiAssistantDetail,
+  'CV1-DRT': Page.Cv1DrtAiAssistantDetail,
   'SEEDs': Page.SeedsDetail,
   'ADS Platform': Page.AdsPlatformDetail,
-  'Vision AI PBV': Page.VisionAiPbvDetail,
   'In-Cabin Adventure': Page.InCabinAdventureDetail,
   'SVM (Surround View Monitor)': Page.SvmDetail
 };
@@ -78,7 +78,7 @@ const PRODUCT_IMAGE_MAP: Record<string, string> = {
   'Dash Cam': '/images/products/dash-cam.svg',
   'EV Home Charger': '/images/products/ev-home-charger.svg',
   'Portable Charger': '/images/products/portable-charger.svg',
-  'CV1-DRT & AI Assistant': '/images/products/cv1-drt-ai-assistant.svg',
+  'CV1-DRT': '/images/products/cv1-drt-ai-assistant.svg',
   'Smart Police Vehicle': '/images/products/smart-police-vehicle.svg',
   'SEEDs': '/images/products/seeds.svg',
   'ADS Platform': '/images/products/ads-platform.svg',
@@ -179,7 +179,7 @@ const PRODUCT_CATEGORIES: ProductCategory[] = [
     title: 'PBV Solution',
     description: 'Specialized PBV conversions with AI assistants and police-ready solutions built on our mobility platform.',
     cards: [
-      makeCard('CV1-DRT & AI Assistant', 2),
+      makeCard('CV1-DRT', 2),
       makeCard('Smart Police Vehicle', 2)
     ]
   },
@@ -381,14 +381,24 @@ const InnovationScreen: React.FC<InnovationScreenProps> = ({ setPage }) => {
 
   const handleScroll = useCallback(
     (event: React.UIEvent<HTMLDivElement>) => {
-      updateScrollMetrics(event.currentTarget);
+      const target = event.currentTarget;
+      updateScrollMetrics(target);
+      // Save scroll position
+      sessionStorage.setItem('innovationScrollPosition', target.scrollTop.toString());
     },
     [updateScrollMetrics]
   );
 
+  // Restore scroll position on mount
   useEffect(() => {
     const target = scrollContainerRef.current;
     if (!target) return;
+
+    const savedScrollPosition = sessionStorage.getItem('innovationScrollPosition');
+    if (savedScrollPosition) {
+      target.scrollTop = parseFloat(savedScrollPosition);
+    }
+
     updateScrollMetrics(target);
 
     const handleResize = () => {

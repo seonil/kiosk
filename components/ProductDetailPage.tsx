@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '../types';
 import { PRODUCT_DETAIL_CONFIGS, DetailSection, ProductDetailConfig } from '../data/productDetailConfig';
-import { ArrowLeftIcon, HomeIcon } from './icons';
+import Header from './Header';
 
 interface ProductDetailPageProps {
   setPage: (page: Page) => void;
@@ -12,25 +12,28 @@ const renderFeatureTable = (config: ProductDetailConfig['featureTable']) => {
   if (!config) return null;
   return (
     <section>
-      <div className="flex justify-between items-center" style={{ marginBottom: '16px' }}>
+      <div className="flex items-center" style={{ marginBottom: '16px' }}>
         <span
           style={{
-            fontSize: '24px',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            textTransform: 'uppercase',
-            color: '#2B1573'
+            color: '#000',
+            fontFamily: 'Albert Sans',
+            fontSize: '25px',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: 'normal'
           }}
         >
           {config.leftHeader}
         </span>
         <span
           style={{
-            fontSize: '18px',
-            color: '#2B1573',
-            opacity: 0.8,
-            fontWeight: 500,
-            letterSpacing: '0.1em'
+            color: '#000',
+            fontFamily: 'Albert Sans',
+            fontSize: '25px',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: 'normal',
+            marginLeft: '200px'
           }}
         >
           {config.rightHeader}
@@ -53,49 +56,45 @@ const renderFeatureTable = (config: ProductDetailConfig['featureTable']) => {
               fontSize: '20px',
               fontWeight: 500,
               color: '#09294A',
-              lineHeight: '150%'
+              lineHeight: '150%',
+              fontFamily: 'Albert Sans'
             }}
           >
             {row.labelLines.map(line => (
               <div key={line}>{line}</div>
             ))}
           </div>
-          <div>
-            <ul style={{ fontSize: '20px', color: '#09294A', lineHeight: '150%' }}>
-              {row.details.map(item => (
-                <li key={item} style={{ marginBottom: '6px' }}>
-                  {item}
-                </li>
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+            <ul style={{ fontSize: '20px', color: '#09294A', lineHeight: '150%', fontFamily: 'Albert Sans', flex: row.detailMedia && row.detailMedia.length > 0 ? '1' : 'auto' }}>
+              {row.details.map((item, index) => (
+                <li key={`${item}-${index}`} style={{ marginBottom: '6px' }} dangerouslySetInnerHTML={{ __html: item }} />
               ))}
             </ul>
             {row.detailMedia && row.detailMedia.length > 0 && (
               <div
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))',
+                  display: 'flex',
                   gap: '12px',
-                  marginTop: '16px'
+                  flexShrink: 0
                 }}
               >
                 {row.detailMedia.map(media => (
                   <div
                     key={media.alt}
                     style={{
-                      width: '100%',
-                      aspectRatio: '1 / 1',
+                      width: '200px',
+                      height: '200px',
                       borderRadius: '18px',
-                      background: 'rgba(255,255,255,0.8)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      overflow: 'hidden',
-                      border: '1px solid rgba(9, 41, 74, 0.1)'
+                      overflow: 'hidden'
                     }}
                   >
                     <img
                       src={media.src}
                       alt={media.alt}
-                      style={{ width: '80%', height: '80%', objectFit: 'contain' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     />
                   </div>
                 ))}
@@ -120,12 +119,13 @@ const renderSection = (section: DetailSection) => {
             fontSize: '22px',
             fontWeight: 600,
             color: '#09294A',
-            marginBottom: '12px'
+            marginBottom: '12px',
+            fontFamily: 'Albert Sans'
           }}
         >
           {section.title}
         </h3>
-        <p style={{ fontSize: '19px', color: '#09294A', lineHeight: '155%' }}>
+        <p style={{ fontSize: '19px', color: '#09294A', lineHeight: '155%', fontFamily: 'Albert Sans' }}>
           {section.description}
         </p>
         {section.highlight && (
@@ -134,7 +134,8 @@ const renderSection = (section: DetailSection) => {
               color: '#D45050',
               fontWeight: 600,
               fontSize: '19px',
-              marginTop: '8px'
+              marginTop: '8px',
+              fontFamily: 'Albert Sans'
             }}
           >
             • {section.highlight}
@@ -155,7 +156,8 @@ const renderSection = (section: DetailSection) => {
             fontSize: '22px',
             fontWeight: 600,
             color: '#09294A',
-            marginBottom: '12px'
+            marginBottom: '12px',
+            fontFamily: 'Albert Sans'
           }}
         >
           {section.title}
@@ -169,7 +171,8 @@ const renderSection = (section: DetailSection) => {
                 paddingLeft: '18px',
                 fontSize: '19px',
                 color: '#09294A',
-                lineHeight: '150%'
+                lineHeight: '150%',
+                fontFamily: 'Albert Sans'
               }}
             >
               {column.map(item => (
@@ -194,7 +197,8 @@ const renderSection = (section: DetailSection) => {
           fontSize: '22px',
           fontWeight: 600,
           color: '#09294A',
-          marginBottom: '12px'
+          marginBottom: '12px',
+          fontFamily: 'Albert Sans'
         }}
       >
         {section.title}
@@ -235,7 +239,8 @@ const renderSection = (section: DetailSection) => {
                 style={{
                   fontSize: '18px',
                   fontWeight: 600,
-                  color: item.caption.includes('NEW') ? '#2B4CCB' : '#09294A'
+                  color: item.caption.includes('NEW') ? '#2B4CCB' : '#09294A',
+                  fontFamily: 'Albert Sans'
                 }}
               >
                 {item.caption}
@@ -279,66 +284,53 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ setPage, detailPa
         backgroundPosition: 'center'
       }}
     >
+      <Header setPage={setPage} onBack={() => setPage(Page.Innovation)} />
 
-      <div className="relative flex flex-col h-full" style={{ padding: '60px 90px 40px' }}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setPage(Page.Innovation)}
-              style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                background: 'rgba(255,255,255,0.35)',
-                border: '1px solid rgba(255,255,255,0.4)',
-                backdropFilter: 'blur(8px)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <ArrowLeftIcon className="w-7 h-7 text-[#2B1573]" />
-            </button>
+      <div className="relative flex flex-col h-full" style={{ paddingTop: '140px', paddingLeft: '90px', paddingRight: '90px', paddingBottom: '40px' }}>
+        <div className="flex items-center" style={{ marginLeft: '30px', marginTop: '30px', position: 'relative' }}>
+          <img
+            src="/images/title-effect.png"
+            alt="Title effect"
+            style={{
+              position: 'absolute',
+              left: '-200px',
+              top: 'calc(50% + 20px)',
+              transform: 'translateY(-50%) scale(0.6)',
+              transformOrigin: 'left center',
+              zIndex: 0,
+              opacity: 1
+            }}
+          />
+          <div style={{ position: 'relative', display: 'inline-block' }}>
             <h1
               style={{
-                fontSize: '64px',
-                fontWeight: 700,
                 fontFamily: 'Albert Sans',
-                color: '#09294A',
-                textShadow: '0 12px 25px rgba(9, 41, 74, 0.25)'
+                fontSize: '60px',
+                fontStyle: 'normal',
+                fontWeight: 600,
+                lineHeight: '110%',
+                letterSpacing: '0.6px',
+                background: 'linear-gradient(90deg, #09294A 0.77%, #5725D0 60.9%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                position: 'relative',
+                zIndex: 1,
+                WebkitBoxReflect: 'below -20px linear-gradient(transparent 50%, rgba(255, 255, 255, 0.4))'
               }}
             >
               {title}
             </h1>
           </div>
-          <button
-            onClick={() => setPage(Page.Home)}
-            style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              background: 'rgba(255,255,255,0.35)',
-              border: '1px solid rgba(255,255,255,0.4)',
-              backdropFilter: 'blur(8px)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <HomeIcon className="w-7 h-7 text-[#2B1573]" />
-          </button>
         </div>
 
         {hasDetailContent ? (
-          <div className="flex flex-1 items-start gap-16 mt-16">
+          <div className="flex flex-1 items-start gap-16">
             <div
               style={{
-                flex: '0 0 920px',
-                background: 'rgba(255,255,255,0.75)',
+                flex: '0 0 1100px',
                 borderRadius: '40px',
                 padding: '48px',
-                boxShadow: '0 30px 50px rgba(6, 17, 37, 0.15)',
-                border: '1px solid rgba(255,255,255,0.6)',
                 overflowY: 'auto'
               }}
             >

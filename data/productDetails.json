@@ -416,26 +416,35 @@
         "rows": [
           {
             "labelLines": [
-              "Haptic"
+              "Haptic Feedback for",
+              "Safer Driving"
             ],
             "details": [
-              "Provides precise tactile feedback through LCD touch haptic functionality, delivering a more intuitive and responsive user experience."
+              "<strong>6\" full TFT display</strong> with integrated touch and button inputs",
+              "<strong>Haptic feedback technology</strong> for distraction-free driving",
+              "Intuitive tactile response for enhanced user experience"
             ]
           },
           {
             "labelLines": [
-              "OTA (Over The Air)"
+              "Advanced Climate",
+              "Management"
             ],
             "details": [
-              "Enables software updates via wireless networks."
+              "<strong>Climate CAN compatibility</strong> for comprehensive climate control",
+              "Air purification and <strong>multi-zone temperature control</strong>",
+              "<strong>EV-specific airflow logic</strong> for optimal cabin comfort"
             ]
           },
           {
             "labelLines": [
-              "Dual, Tri-zone Control"
+              "Proven Automotive",
+              "Reliability"
             ],
             "details": [
-              "Allows independent climate control for the driver, front passenger, and rear seats."
+              "Applied in <strong>mass-production programs</strong> worldwide",
+              "Validated under <strong>OEM-grade durability and safety standards</strong>",
+              "<strong>Cybersecurity certified</strong> for automotive applications"
             ]
           }
         ]

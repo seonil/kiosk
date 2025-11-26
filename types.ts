@@ -34,4 +34,12 @@ export enum Page {
   PassengerRseDetail = 'PassengerRseDetail',
   HvacControlDetail = 'HvacControlDetail',
   Contact = 'Contact',
+  DigitalCockpitDetail = 'DigitalCockpitDetail',
+  DsmSolutionDetail = 'DsmSolutionDetail',
+  SvmSolutionDetail = 'SvmSolutionDetail',
+  DashCamDetail = 'DashCamDetail',
+  Rse25Detail = 'Rse25Detail',
+  EvChargerDetail = 'EvChargerDetail',
+  AirPurifierSolutionDetail = 'AirPurifierSolutionDetail',
+  SmartCarpetDetail = 'SmartCarpetDetail',
 }

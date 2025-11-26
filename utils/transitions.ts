@@ -77,6 +77,15 @@ export const simpleFadeVariants: Variants = {
 };
 
 /**
+ * No-fade transition (used when a prior whiteout is already covering the swap)
+ */
+export const noFadeVariants: Variants = {
+  initial: { opacity: 1 },
+  animate: { opacity: 1 },
+  exit: { opacity: 1 },
+};
+
+/**
  * Aurora gradient overlay animation
  * Creates moving radial gradient effect during transitions
  */

@@ -10,12 +10,21 @@ import SvmScreen from './components/SvmScreen';
 import InnovationScreen from './components/InnovationScreen';
 import ContactScreen from './components/ContactScreen';
 import Cv1DrtScreen from './components/Cv1DrtScreen';
+import DigitalCockpitDetailScreen from './components/DigitalCockpitDetailScreen';
+import DsmSolutionDetailScreen from './components/DsmSolutionDetailScreen';
+import SvmSolutionDetailScreen from './components/SvmSolutionDetailScreen';
+import DashCamDetailScreen from './components/DashCamDetailScreen';
+import Rse25DetailScreen from './components/Rse25DetailScreen';
+import EvChargerDetailScreen from './components/EvChargerDetailScreen';
+import AirPurifierSolutionDetailScreen from './components/AirPurifierSolutionDetailScreen';
+import SmartCarpetDetailScreen from './components/SmartCarpetDetailScreen';
 import {
   auroraPageVariants,
   simpleFadeVariants,
   auroraOverlayVariants,
   pageTransitionConfig,
-  shouldUseAuroraEffect
+  shouldUseAuroraEffect,
+  noFadeVariants
 } from './utils/transitions';
 
 const DETAIL_PAGES = new Set<Page>([
@@ -66,6 +75,8 @@ const App: React.FC = () => {
 
   // Determine if we should use aurora effect for this transition
   const useAurora = shouldUseAuroraEffect(prevPageRef.current, page);
+  const disableFade = prevPageRef.current === Page.TailoredInCabin;
+  const variants = disableFade ? noFadeVariants : (useAurora ? auroraPageVariants : simpleFadeVariants);
 
   // Handle browser back button
   useEffect(() => {
@@ -118,17 +129,44 @@ const App: React.FC = () => {
         return <InnovationScreen setPage={handleSetPage} />;
       case Page.Contact:
         return <ContactScreen setPage={handleSetPage} />;
+      case Page.DigitalCockpitDetail:
+        return <DigitalCockpitDetailScreen setPage={handleSetPage} />;
+      case Page.DsmSolutionDetail:
+        return <DsmSolutionDetailScreen setPage={handleSetPage} />;
+      case Page.SvmSolutionDetail:
+        return <SvmSolutionDetailScreen setPage={handleSetPage} />;
+      case Page.DashCamDetail:
+        return <DashCamDetailScreen setPage={handleSetPage} />;
+      case Page.Rse25Detail:
+        return <Rse25DetailScreen setPage={handleSetPage} />;
+      case Page.EvChargerDetail:
+        return <EvChargerDetailScreen setPage={handleSetPage} />;
+      case Page.AirPurifierSolutionDetail:
+        return <AirPurifierSolutionDetailScreen setPage={handleSetPage} />;
+      case Page.SmartCarpetDetail:
+        return <SmartCarpetDetailScreen setPage={handleSetPage} />;
       default:
         return <HomeScreen setPage={handleSetPage} />;
     }
   };
+
+  // When leaving TailoredInCabin, skip page fade to avoid dark flash after whiteout
+  if (disableFade) {
+    return (
+      <main className="h-screen w-screen bg-[#0A0F1A] overflow-hidden">
+        <div className="h-full w-full relative">
+          {renderPage()}
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="h-screen w-screen bg-[#0A0F1A] overflow-hidden">
       <AnimatePresence mode={pageTransitionConfig.mode} initial={pageTransitionConfig.initial}>
         <motion.div
           key={page}
-          variants={useAurora ? auroraPageVariants : simpleFadeVariants}
+          variants={variants}
           initial="initial"
           animate="animate"
           exit="exit"

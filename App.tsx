@@ -75,7 +75,7 @@ const App: React.FC = () => {
 
   // Determine if we should use aurora effect for this transition
   const useAurora = shouldUseAuroraEffect(prevPageRef.current, page);
-  const disableFade = prevPageRef.current === Page.TailoredInCabin;
+  const disableFade = prevPageRef.current === Page.TailoredInCabin || prevPageRef.current === Page.Innovation;
   const variants = disableFade ? noFadeVariants : (useAurora ? auroraPageVariants : simpleFadeVariants);
 
   // Handle browser back button

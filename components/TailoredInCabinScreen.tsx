@@ -80,6 +80,11 @@ const SOLUTIONS: Solution[] = [
 ];
 
 const TailoredInCabinScreen: React.FC<{ setPage: (page: Page) => void }> = ({ setPage }) => {
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [animationStage, setAnimationStage] = useState<'normal' | 'drift' | 'rotating' | 'charging'>('normal');
+  const [whiteout, setWhiteout] = useState(false);
+
+  const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
   const handleButtonClick = (solution: Solution) => {
     if (!solution.pageTarget || isTransitioning) return;

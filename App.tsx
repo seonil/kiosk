@@ -59,9 +59,6 @@ const App: React.FC = () => {
   // Track previous page for transition logic
   const prevPageRef = useRef<Page | null>(null);
 
-  // Navigation history stack
-  const historyRef = useRef<Page[]>([]);
-
   // Initialize page from sessionStorage or default to Home
   const [page, setPage] = useState<Page>(() => {
     if (typeof window !== 'undefined') {
@@ -80,23 +77,31 @@ const App: React.FC = () => {
 
   // Handle browser back button
   useEffect(() => {
-    const handlePopState = () => {
-      if (historyRef.current.length > 0) {
-        const previousPage = historyRef.current.pop()!;
-        prevPageRef.current = page;
+    const handlePopState = (event: PopStateEvent) => {
+      const previousPage = event.state?.page as Page | undefined;
+      if (previousPage && Object.values(Page).includes(previousPage)) {
         setPage(previousPage);
+        return;
       }
+      // If no history state, default to home
+      setPage(Page.Home);
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [page]);
+  }, []);
+
+  // Ensure the initial history entry carries the current page
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.history.replaceState({ page }, '', window.location.pathname);
+    }
+  }, []);
 
   // Custom setPage wrapper to handle history
   const handleSetPage = useCallback((newPage: Page) => {
     if (newPage !== page) {
-      historyRef.current.push(page);
-      window.history.pushState({}, '');
+      window.history.pushState({ page: newPage }, '', window.location.pathname);
       setPage(newPage);
     }
   }, [page]);

@@ -7,6 +7,10 @@ interface SvmSolutionDetailScreenProps {
 }
 
 const SvmSolutionDetailScreen: React.FC<SvmSolutionDetailScreenProps> = ({ setPage }) => {
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <div
       style={{
@@ -38,7 +42,7 @@ const SvmSolutionDetailScreen: React.FC<SvmSolutionDetailScreenProps> = ({ setPa
         <source src={`images/svm.webm?v=${Date.now()}`} type="video/webm" />
       </video>
 
-      <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} variant="white" />
+      <Header setPage={setPage} onBack={handleBack} variant="white" />
 
       <div
         style={{

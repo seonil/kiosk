@@ -9,10 +9,14 @@ interface SvmScreenProps {
 }
 
 const SvmScreen: React.FC<SvmScreenProps> = ({ setPage }) => {
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <div className="w-full h-full flex flex-col justify-center items-center p-8 bg-cover bg-center" style={{ backgroundImage: 'url(images/home-bg.png)' }}>
       <div className="absolute inset-0 bg-black/60"></div>
-      <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} />
+      <Header setPage={setPage} onBack={handleBack} />
       <div className="text-center relative z-10">
         <h1 className="text-4xl font-bold text-white">SVM</h1>
         <p className="text-lg text-gray-200 mt-2">Let's see how SVM works</p>

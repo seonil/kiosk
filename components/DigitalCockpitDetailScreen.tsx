@@ -11,6 +11,10 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
   const [isToggleOn, setIsToggleOn] = useState(false);
   const [opacity, setOpacity] = useState(1);
 
+  const handleBack = () => {
+    window.history.back();
+  };
+
   // Add CSS-in-JS styles
   React.useEffect(() => {
     const style = document.createElement('style');
@@ -80,7 +84,7 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
         backgroundPosition: 'center'
       }}
     >
-      <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} variant="white" />
+      <Header setPage={setPage} onBack={handleBack} variant="white" />
 
       {/* Toggle Switch */}
       <div

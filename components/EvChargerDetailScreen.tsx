@@ -7,6 +7,10 @@ interface EvChargerDetailScreenProps {
 }
 
 const EvChargerDetailScreen: React.FC<EvChargerDetailScreenProps> = ({ setPage }) => {
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <div
       style={{
@@ -88,7 +92,7 @@ const EvChargerDetailScreen: React.FC<EvChargerDetailScreenProps> = ({ setPage }
         </p>
       </div>
 
-      <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} variant="white" />
+      <Header setPage={setPage} onBack={handleBack} variant="white" />
     </div>
   );
 };

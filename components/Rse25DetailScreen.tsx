@@ -10,6 +10,10 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
   const [isRotated, setIsRotated] = useState(false);
   const [showPortrait, setShowPortrait] = useState(false);
 
+  const handleBack = () => {
+    window.history.back();
+  };
+
   const handleClick = () => {
     setIsRotated(!isRotated);
   };
@@ -44,7 +48,7 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
         backgroundPosition: 'center'
       }}
     >
-      <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} variant="white" />
+      <Header setPage={setPage} onBack={handleBack} variant="white" />
 
       <div
         style={{

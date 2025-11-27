@@ -7,6 +7,10 @@ interface DsmSolutionDetailScreenProps {
 }
 
 const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPage }) => {
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <div
       style={{
@@ -18,7 +22,7 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
         backgroundPosition: 'center'
       }}
     >
-      <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} variant="white" />
+      <Header setPage={setPage} onBack={handleBack} variant="white" />
 
       <div
         style={{
@@ -64,6 +68,18 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
           Experience <strong style={{ fontWeight: '700' }}>Driver Status Monitoring</strong> system, <br/> which tracks driver's eye-closure patterns to detect signs of drowsiness, <br/>providing continuous monitoring and instant alerts through coordinated cluster <br/>and center-display warnings to enhance overall driving safety.
         </p>
       </div>
+
+      <img
+        src="images/dsm.png"
+        alt="DSM"
+        style={{
+          position: 'absolute',
+          bottom: '300px',
+          left: '40px',
+          width: '1352px',
+          height: 'auto'
+        }}
+      />
 
       {/* Detection image with wiping animation */}
       <div

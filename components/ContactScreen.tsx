@@ -128,17 +128,17 @@ const ContactScreen: React.FC<ContactScreenProps> = ({ setPage }) => {
         <QRCodeCard
           title="Official Website"
           subtitle="Scan for detailed information"
-          qrCodeUrl="https://api.qrserver.com/v1/create-qr-code/?size=245x245&data=https://www.motrex.co.kr/en"
+          qrCodeUrl="images/contact-home.png"
         />
         <QRCodeCard
           title="LinkedIn"
           subtitle="Connect with us on LinkedIn"
-          qrCodeUrl="https://api.qrserver.com/v1/create-qr-code/?size=245x245&data=https://www.linkedin.com/company/motrex"
+          qrCodeUrl="images/contact-linkedin.png"
         />
         <QRCodeCard
-          title="Sales Representative"
-          subtitle="Scan business card/contact info."
-          qrCodeUrl="https://api.qrserver.com/v1/create-qr-code/?size=245x245&data=mailto:sales@motrex.co.kr"
+          title="Business Inquiry"
+          subtitle="Scan to send us an email"
+          qrCodeUrl="images/contact-email.png"
         />
       </div>
 

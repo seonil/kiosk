@@ -20,6 +20,51 @@ const DsmSolutionDetailScreen: React.FC<DsmSolutionDetailScreenProps> = ({ setPa
     >
       <Header setPage={setPage} onBack={() => setPage(Page.TailoredInCabin)} variant="white" />
 
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '113px',
+          left: '68px',
+          display: 'flex',
+          alignItems: 'flex-end',
+          gap: '40px',
+          maxWidth: '1784px'
+        }}
+      >
+        <h1
+          style={{
+            color: '#09294A',
+            fontFamily: '"Albert Sans"',
+            fontSize: '52px',
+            fontStyle: 'normal',
+            fontWeight: '600',
+            lineHeight: '150%',
+            letterSpacing: '-0.52px',
+            margin: 0,
+            flexShrink: 0
+          }}
+        >
+          DSM <br/> <span style={{ fontSize: '32px', fontWeight: '400', position: 'relative', top: '-35px' }}>(Driver Status Monitoring)</span>
+        </h1>
+        <p
+          style={{
+            color: '#09294A',
+            fontFamily: '"Albert Sans"',
+            fontSize: '28px',
+            fontStyle: 'normal',
+            fontWeight: '300',
+            lineHeight: '140%',
+            letterSpacing: '-0.28px',
+            margin: 0,
+            flexGrow: 1,
+            marginLeft: '65px',
+            marginBottom: '0px'
+          }}
+        >
+          Experience <strong style={{ fontWeight: '700' }}>Driver Status Monitoring</strong> system, <br/> which tracks driver's eye-closure patterns to detect signs of drowsiness, <br/>providing continuous monitoring and instant alerts through coordinated cluster <br/>and center-display warnings to enhance overall driving safety.
+        </p>
+      </div>
+
       {/* Detection image with wiping animation */}
       <div
         style={{

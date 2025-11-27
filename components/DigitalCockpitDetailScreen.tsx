@@ -27,6 +27,11 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
         }
       }
 
+      @keyframes pulsePrompt {
+        0% { transform: translateX(0) scale(1); opacity: 0.9; }
+        50% { transform: translateX(-5px) scale(1.05); opacity: 1; }
+        100% { transform: translateX(0) scale(1); opacity: 0.9; }
+      }
       `;
     document.head.appendChild(style);
 
@@ -110,6 +115,42 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
           }}
         />
       </div>
+
+      {/* Prompt Message */}
+      {!isToggleOn && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '235px',
+            right: '430px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            animation: 'pulsePrompt 2s infinite'
+          }}
+        >
+          <div
+            style={{
+              color: '#09294A',
+              fontFamily: '"Albert Sans"',
+              fontSize: '22px',
+              fontWeight: '600',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            Tap to activate EZ-Mode
+          </div>
+          <div
+            style={{
+              width: 0,
+              height: 0,
+              borderTop: '8px solid transparent',
+              borderBottom: '8px solid transparent',
+              borderLeft: '12px solid #09294A'
+            }}
+          />
+        </div>
+      )}
 
       <img
         src="images/digital-cockpit-normalmode.png"

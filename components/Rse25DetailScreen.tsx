@@ -51,7 +51,7 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
           position: 'absolute',
           top: '180px',
           left: '68px',
-          maxWidth: '700px'
+          width: '1680px'
         }}
       >
         <h1

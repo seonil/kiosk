@@ -29,35 +29,35 @@ const subsidiaries: SubsidiaryContent[] = [
   {
     id: 'motrex',
     title: 'MOTREX',
-    description: 'Experience EZ-Cockpit, MOTREX\'s next-generation digital cockpit brand that integrates the cluster and center display into one intelligent system - offering a unified visual flow, real-time safety alerts, and an Easy Mode for senior-friendly operation.',
+    description: 'MOTREX, driven by the expertise of its skilled employees, is leading the automotive parts industry while offering a diverse range of products based on advanced software technology. With a commitment to innovation and challenges, MOTREX aspires to become a global leader in the future mobility market by creating exceptional value for its customers.',
     videoUrl: '/videos/motrex.mp4',
     buttonImage: 'images/btn-motrex.png'
   },
   {
     id: 'motrex-ev',
     title: 'MOTREX EV',
-    description: 'MOTREX EV provides comprehensive energy solutions for electric vehicles, including advanced charging infrastructure and battery management systems for the future of sustainable mobility.',
+    description: 'MOTREX EV is a leading company in the \'Energy Hub\' industry, based on smart grid networks, energy management, and EV charging solutions.',
     videoUrl: '/videos/motrex-ev.mp4',
     buttonImage: 'images/btn-motrex-ev.png'
   },
   {
     id: 'motrex-efm',
     title: 'MOTREX efm',
-    description: 'MOTREX efm specializes in high-quality interior materials for automotive applications, combining aesthetic design with functional excellence to create premium in-cabin experiences.',
+    description: 'MOTREX efm leads Korea\'s interior materials market, holding the No.1 share in automotive floor carpets.',
     videoUrl: '/videos/motrex-efm.mp4',
     buttonImage: 'images/btn-motrex-efm.png'
   },
   {
     id: 'mtr',
     title: 'MTR',
-    description: 'MTR leads in special vehicle conversion and in-cabin integration, transforming standard vehicles into specialized solutions for various industries and applications.',
+    description: 'MTR is the best PBV solution provider, backed by extensive experience and proven expertise in special-featured vehicle development.',
     videoUrl: '/videos/mtr.mp4',
     buttonImage: 'images/btn-mtr.png'
   },
   {
     id: 'junjin',
-    title: 'JUNJIN Robotics',
-    description: 'JUNJIN Robotics pioneers construction automation and robotic solutions, revolutionizing the construction industry with advanced autonomous systems and smart machinery.',
+    title: 'JUNJIN C&R',
+    description: 'JUNJIN is the foremost company in Korea for concrete pump trucks, and it is at the forefront of the construction equipment industry.',
     videoUrl: '/videos/junjin.mp4',
     buttonImage: 'images/btn-junjin.png'
   }

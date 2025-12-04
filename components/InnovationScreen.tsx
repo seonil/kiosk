@@ -86,7 +86,7 @@ const PRODUCT_IMAGE_MAP: Record<string, string> = {
   'In-Cabin Adventure': 'images/products/xrbox.png'
 };
 
-const PLACEHOLDER_IMAGE = 'images/products/placeholder.svg';
+const PLACEHOLDER_IMAGE = 'images/products/placeholder.png';
 
 const getDetailPage = (title: string) => PRODUCT_DETAIL_PAGE_MAP[title];
 const getProductImage = (title: string) => PRODUCT_IMAGE_MAP[title] ?? PLACEHOLDER_IMAGE;

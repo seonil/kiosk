@@ -266,8 +266,8 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ setPage, detailPa
 
   const { title, heroImage, featureTable, sections } = config;
   const heroImageStyle = {
-    width: 360,
-    height: 620,
+    width: 720,  // 2x from 360
+    height: 1240, // 2x from 620
     objectFit: 'contain' as const,
     ...(heroImage.image ?? {})
   };
@@ -325,21 +325,39 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ setPage, detailPa
         </div>
 
         {hasDetailContent ? (
-          <div className="flex flex-1 items-start gap-16">
+          <div className="flex flex-1 items-start gap-16" style={{ position: 'relative' }}>
             <div
               style={{
                 flex: '0 0 1100px',
                 borderRadius: '40px',
                 padding: '48px',
-                overflowY: 'auto'
+                overflowY: 'auto',
+                position: 'relative',
+                zIndex: 10
               }}
             >
               {renderFeatureTable(featureTable)}
               {sections?.map(renderSection)}
             </div>
 
-            <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <img src={heroImage.src} alt={heroImage.alt} style={{ ...heroImageStyle, maxWidth: '80%', maxHeight: '85%' }} />
+            <div style={{
+              position: 'absolute',
+              right: '100px',
+              top: '0',
+              zIndex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-start'
+            }}>
+              <img
+                src={heroImage.src}
+                alt={heroImage.alt}
+                style={{
+                  width: heroImageStyle.width,
+                  height: heroImageStyle.height,
+                  objectFit: heroImageStyle.objectFit,
+                }}
+              />
             </div>
           </div>
         ) : (

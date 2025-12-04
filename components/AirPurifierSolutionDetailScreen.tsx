@@ -17,12 +17,35 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
         position: 'relative',
         width: '1920px',
         height: '1080px',
-        backgroundImage: 'url(images/bg-air-purifier.png)',
+        backgroundImage: 'url(images/bg-ev-charger.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
     >
-      <Header setPage={setPage} onBack={handleBack} variant="white" />
+      <img
+        src="images/bg-ev-charger-top.png"
+        alt=""
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '1920px',
+          height: 'auto',
+          objectFit: 'cover',
+          zIndex: 2
+        }}
+      />
+
+      <img
+        src="images/air-purifier.png"
+        alt="Air Purifier"
+        style={{
+          position: 'absolute',
+          top: '174px',
+          left: '112px',
+          zIndex: 5
+        }}
+      />
 
       <video
         autoPlay
@@ -36,7 +59,7 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
           width: 'auto',
           height: 'auto',
           objectFit: 'cover',
-          zIndex: 1
+          zIndex: 0
         }}
       >
         <source src={`images/airpurifier.webm?v=${Date.now()}`} type="video/webm" />
@@ -46,7 +69,7 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
         style={{
           position: 'absolute',
           bottom: '113px',
-          left: '68px',
+          left: '112px',
           width: '700px',
           zIndex: 10
         }}
@@ -84,6 +107,8 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
           Experience the <strong style={{ fontWeight: '700' }}>Air Purifier</strong>, combining advanced purification and sterilization performance with real-time AQI display, while seamlessly integrating with the AVN for intuitive control, status monitoring, and user-friendly convenience features that maintain a cleaner and more comfortable in-cabin environment.
         </p>
       </div>
+
+      <Header setPage={setPage} onBack={handleBack} variant="white" />
     </div>
   );
 };

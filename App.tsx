@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Page } from './types';
@@ -25,6 +24,9 @@ import {
   shouldUseAuroraEffect,
   noFadeVariants
 } from './utils/transitions';
+
+const DESIGN_WIDTH = 1920;
+const DESIGN_HEIGHT = 1080;
 
 const DETAIL_PAGES = new Set<Page>([
   Page.MotrexDetail,
@@ -69,11 +71,33 @@ const App: React.FC = () => {
     }
     return Page.Home;
   });
+  const [viewport, setViewport] = useState({ scale: 1, offsetX: 0, offsetY: 0 });
+
+  const updateViewport = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const scale = Math.min(vw / DESIGN_WIDTH, vh / DESIGN_HEIGHT);
+    const scaledW = DESIGN_WIDTH * scale;
+    const scaledH = DESIGN_HEIGHT * scale;
+    setViewport({
+      scale,
+      offsetX: (vw - scaledW) / 2,
+      offsetY: (vh - scaledH) / 2
+    });
+  }, []);
 
   // Determine if we should use aurora effect for this transition
   const useAurora = shouldUseAuroraEffect(prevPageRef.current, page);
   const disableFade = prevPageRef.current === Page.TailoredInCabin || prevPageRef.current === Page.Innovation;
   const variants = disableFade ? noFadeVariants : (useAurora ? auroraPageVariants : simpleFadeVariants);
+
+  // Recompute scaling/letterboxing on resize (tablet sees full width with top/bottom margin)
+  useEffect(() => {
+    updateViewport();
+    window.addEventListener('resize', updateViewport);
+    return () => window.removeEventListener('resize', updateViewport);
+  }, [updateViewport]);
 
   // Handle browser back button
   useEffect(() => {
@@ -153,19 +177,14 @@ const App: React.FC = () => {
     }
   };
 
-  // When leaving TailoredInCabin, skip page fade to avoid dark flash after whiteout
-  if (disableFade) {
-    return (
-      <main className="h-screen w-screen bg-[#0A0F1A] overflow-hidden">
-        <div className="h-full w-full relative">
-          {renderPage()}
-        </div>
-      </main>
-    );
-  }
-
-  return (
-    <main className="h-screen w-screen bg-[#0A0F1A] overflow-hidden">
+  const pageContent = disableFade ? (
+    <main style={{ width: '100%', height: '100%', backgroundColor: '#0A0F1A', overflow: 'hidden' }}>
+      <div className="h-full w-full relative">
+        {renderPage()}
+      </div>
+    </main>
+  ) : (
+    <main style={{ width: '100%', height: '100%', backgroundColor: '#0A0F1A', overflow: 'hidden' }}>
       <AnimatePresence mode={pageTransitionConfig.mode} initial={pageTransitionConfig.initial}>
         <motion.div
           key={page}
@@ -191,6 +210,32 @@ const App: React.FC = () => {
         </motion.div>
       </AnimatePresence>
     </main>
+  );
+
+  return (
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: '#05070D',
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      <div
+        style={{
+          width: DESIGN_WIDTH,
+          height: DESIGN_HEIGHT,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          transform: `translate(${viewport.offsetX}px, ${viewport.offsetY}px) scale(${viewport.scale})`,
+          transformOrigin: 'top left'
+        }}
+      >
+        {pageContent}
+      </div>
+    </div>
   );
 };
 

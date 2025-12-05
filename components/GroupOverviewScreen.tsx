@@ -21,44 +21,44 @@ interface SubsidiaryContent {
 const subsidiaries: SubsidiaryContent[] = [
   {
     id: 'overview',
-    title: 'MOTREX Group Overview',
+    title: 'MOTREX Group',
     description: 'MOTREX leads advanced automotive electronics, with affiliated companies including MOTREX EV(EV Charging), MOTREX efm(Interior Materials), MTR (Special Vehicle Conversions), and JUNJIN (Construction Automation). Together, they represent a unified ecosystem for the future of mobility.',
-    videoUrl: '/videos/motrex.mp4',
+    videoUrl: 'videos/motrex.mp4',
     buttonImage: 'images/btn-motrex.png'
   },
   {
     id: 'motrex',
     title: 'MOTREX',
     description: 'MOTREX, driven by the expertise of its skilled employees, is leading the automotive parts industry while offering a diverse range of products based on advanced software technology. With a commitment to innovation and challenges, MOTREX aspires to become a global leader in the future mobility market by creating exceptional value for its customers.',
-    videoUrl: '/videos/motrex.mp4',
+    videoUrl: 'videos/motrex.mp4',
     buttonImage: 'images/btn-motrex.png'
   },
   {
     id: 'motrex-ev',
     title: 'MOTREX EV',
     description: 'MOTREX EV is a leading company in the \'Energy Hub\' industry, based on smart grid networks, energy management, and EV charging solutions.',
-    videoUrl: '/videos/motrex-ev.mp4',
+    videoUrl: 'videos/motrex-ev.mp4',
     buttonImage: 'images/btn-motrex-ev.png'
   },
   {
     id: 'motrex-efm',
     title: 'MOTREX efm',
     description: 'MOTREX efm leads Korea\'s interior materials market, holding the No.1 share in automotive floor carpets.',
-    videoUrl: '/videos/motrex-efm.mp4',
+    videoUrl: 'videos/motrex-efm.mp4',
     buttonImage: 'images/btn-motrex-efm.png'
   },
   {
     id: 'mtr',
     title: 'MTR',
     description: 'MTR is the best PBV solution provider, backed by extensive experience and proven expertise in special-featured vehicle development.',
-    videoUrl: '/videos/mtr.mp4',
+    videoUrl: 'videos/mtr.mp4',
     buttonImage: 'images/btn-mtr.png'
   },
   {
     id: 'junjin',
     title: 'JUNJIN C&R',
     description: 'JUNJIN is the foremost company in Korea for concrete pump trucks, and it is at the forefront of the construction equipment industry.',
-    videoUrl: '/videos/junjin.mp4',
+    videoUrl: 'videos/junjin.mp4',
     buttonImage: 'images/btn-junjin.png'
   }
 ];
@@ -122,19 +122,46 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
 
       {/* Title */}
       <div
-        className="absolute"
+        className="flex items-center"
         style={{
-          top: '141px',
-          left: '0',
-          width: '748px',
-          height: '162px',
+          position: 'absolute',
+          top: '171px',
+          left: '120px',
         }}
       >
         <img
-          src="images/group-title.png"
-          alt="Why Motrex"
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          src="images/title-effect.png"
+          alt="Title effect"
+          style={{
+            position: 'absolute',
+            left: '50%',
+            top: 'calc(50% + 20px)',
+            transform: 'translate(-50%, -50%) scale(2)',
+            zIndex: 0,
+            opacity: 1
+          }}
         />
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <h1
+            style={{
+              fontFamily: 'Albert Sans',
+              fontSize: '60px',
+              fontStyle: 'normal',
+              fontWeight: 600,
+              lineHeight: '110%',
+              letterSpacing: '0.6px',
+              background: 'linear-gradient(90deg, #09294A 0.77%, #5725D0 60.9%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              position: 'relative',
+              zIndex: 1,
+              WebkitBoxReflect: 'below -20px linear-gradient(transparent 50%, rgba(255, 255, 255, 0.4))'
+            }}
+          >
+            {content.title}
+          </h1>
+        </div>
       </div>
 
       {/* Description Text */}
@@ -167,6 +194,10 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
         <video
           ref={videoRef}
           src={content.videoUrl}
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
           style={{
             width: '1072px',
             height: '617px',

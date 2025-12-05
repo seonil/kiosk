@@ -55,13 +55,13 @@ const PRODUCT_DETAIL_PAGE_MAP: Partial<Record<string, Page>> = {
 };
 
 const PRODUCT_IMAGE_MAP: Record<string, string> = {
-  '7" AV': 'images/products/7-av.png',
-  '8" AV': 'images/products/8-av.png',
+  '7" AV': 'images/products/7-av_detail.png',
+  '8" AV': 'images/products/8-av_detail.png',
   '10.25" AVN': 'images/products/10-25-avn.png',
   '12.3" AVN': 'images/products/12-3-avn.png',
-  'Taxi PBV AVNT': 'images/products/taxi-pbv-avnt.png',
-  'Logistics PBV AVNT': 'images/products/logistics-pbv-avnt.png',
-  'Commercial Truck Cluster': 'images/products/commercial-truck-cluster.png',
+  'Taxi PBV AVNT': 'images/products/taxi-pbv-avnt_detail.png',
+  'Logistics PBV AVNT': 'images/products/logistics-pbv-avnt_detail.png',
+  'Commercial Truck Cluster': 'images/products/commercial-truck-cluster_detail.png',
   'E-scooter 7" LCD Cluster': 'images/products/e-scooter-7-lcd-cluster.png',
   'E-scooter 7" PMVA Cluster': 'images/products/e-scooter-7-pmva-cluster.png',
   'Passenger RSE 2.0': 'images/products/passenger-rse-2-0.png',
@@ -69,17 +69,17 @@ const PRODUCT_IMAGE_MAP: Record<string, string> = {
   'Premium Bus Display': 'images/products/premium-bus-display.png',
   'Roof Monitor': 'images/products/roof-monitor.png',
   '천장형 폴딩타입 모니터 (승합+상용)': 'images/products/ceiling-folding-monitor.png',
-  'HMI Display': 'images/products/hmi-display.png',
+  'HMI Display': 'images/products/hmi-display_detail.png',
   'Air Purifier': 'images/products/air-purifier.png',
   'Wireless Charger': 'images/products/wireless-charger.png',
   'Rear View Camera': 'images/products/rear-view-camera.png',
   'SVM': 'images/products/svm.png',
   DSM: 'images/products/dsm.png',
   'Dash Cam': 'images/products/dash-cam.png',
-  'EV Home Charger': 'images/products/ev-home-charger.png',
-  'Portable Charger': 'images/products/portable-charger.png',
-  'CV1-DRT': 'images/products/cv1-drt-ai-assistant.png',
-  'Smart Police Vehicle': 'images/products/smart-police-vehicle.png',
+  'EV Home Charger': 'images/products/ev-home-charger_detail.png',
+  'Portable Charger': 'images/products/portable-charger_detail.png',
+  'CV1-DRT': 'images/products/cv1-drt-ai-assistant_detail.png',
+  'Smart Police Vehicle': 'images/products/smart-police-vehicle_detail.png',
   'SEEDs': 'images/products/seeds.png',
   'ADS Platform': 'images/products/ads-platform.png',
   'Vision AI PBV': 'images/products/vision-ai-pbv.png',
@@ -359,7 +359,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ card, onNavigate }) => {
 const SCROLLBAR_HEIGHT = 240; // 15rem
 const SCROLLBAR_WIDTH = 20; // 1.25rem
 const CONTENT_TOP_OFFSET = 220;
-const CONTENT_BOTTOM_OFFSET = 120;
+const CONTENT_BOTTOM_OFFSET = 30;
 const SCROLLBAR_RIGHT_OFFSET = 22;
 
 const InnovationScreen: React.FC<InnovationScreenProps> = ({ setPage }) => {
@@ -486,24 +486,46 @@ const InnovationScreen: React.FC<InnovationScreenProps> = ({ setPage }) => {
       <Header setPage={setPage} onBack={() => setPage(Page.Home)} />
 
       <div
-        className="absolute text-center"
+        className="absolute flex items-center"
         style={{
           top: '111px',
           left: '50%',
           transform: 'translateX(-50%)'
         }}
       >
-        <h1
+        <img
+          src="images/title-effect.png"
+          alt="Title effect"
           style={{
-            fontSize: '52px',
-            fontWeight: 600,
-            fontFamily: 'Albert Sans',
-            color: '#FFFFFF',
-            textShadow: '0 2px 20px rgba(0, 0, 0, 0.3)'
+            position: 'absolute',
+            left: '50%',
+            top: 'calc(50% + 20px)',
+            transform: 'translate(-50%, -50%) scale(2)',
+            zIndex: 0,
+            opacity: 1
           }}
-        >
-          Product Portfolio
-        </h1>
+        />
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <h1
+            style={{
+              fontFamily: 'Albert Sans',
+              fontSize: '60px',
+              fontStyle: 'normal',
+              fontWeight: 600,
+              lineHeight: '110%',
+              letterSpacing: '0.6px',
+              background: 'linear-gradient(90deg, #09294A 0.77%, #5725D0 60.9%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              position: 'relative',
+              zIndex: 1,
+              WebkitBoxReflect: 'below -20px linear-gradient(transparent 50%, rgba(255, 255, 255, 0.4))'
+            }}
+          >
+            Product Portfolio
+          </h1>
+        </div>
       </div>
 
       <div

@@ -4,9 +4,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    const isAndroid = mode === 'android';
     return {
       // Base path for GitHub Pages deployment (repo name)
-      base: mode === 'production' ? '/kiosk/' : '/',
+      base: isAndroid ? './' : (mode === 'production' ? '/kiosk/' : '/'),
       server: {
         port: 3006,
         host: '0.0.0.0',

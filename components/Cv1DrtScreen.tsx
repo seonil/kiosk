@@ -43,10 +43,12 @@ const Cv1DrtScreen: React.FC<Cv1DrtScreenProps> = ({ setPage }) => {
           }}
         >
           <video
-            src="/videos/mtr.mp4"
-            controls
+            src="videos/mtr.mp4"
             autoPlay
+            muted
             loop
+            playsInline
+            preload="auto"
             style={{
               width: '100%',
               height: '100%',

@@ -13,6 +13,10 @@ node_modules
 # Build output
 dist
 dist-ssr
+android-app/app/src/main/assets/www/*
+!android-app/app/src/main/assets/www/README.txt
+gradle-*-bin/
+gradle-*-bin.zip
 
 # Environment files (contains API keys)
 .env

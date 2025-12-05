@@ -52,7 +52,7 @@
       "title": "7\" AV System",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/7-av.png",
+        "src": "images/products/7-av_detail.png",
         "alt": "Stellantis 7-inch AV"
       },
       "featureTable": {
@@ -107,7 +107,7 @@
       "title": "Taxi PBV AVNT",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/taxi-pbv-avnt.png",
+        "src": "images/products/taxi-pbv-avnt_detail.png",
         "alt": "Taxi PBV AVNT"
       },
       "featureTable": {
@@ -175,7 +175,7 @@
       "title": "Commercial Truck Cluster",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/commercial-truck-cluster.png",
+        "src": "images/products/commercial-truck-cluster_detail.png",
         "alt": "Commercial Truck Cluster"
       },
       "featureTable": {
@@ -346,10 +346,10 @@
     },
     {
       "page": "CeilingFoldingMonitorDetail",
-      "title": "Display (Staria VIP)",
+      "title": "Ceiling Folding Display",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/ceiling-folding-monitor.png",
+        "src": "images/products/roof-monitor.png",
         "alt": "Ceiling Folding Monitor"
       },
       "featureTable": {
@@ -363,16 +363,6 @@
             "details": [
               "Folding monitor maximizes cabin space and harmonizes with premium interior.",
               "Supports multi-angle adjustment for flexible viewing."
-            ],
-            "detailMedia": [
-              {
-                "src": "images/products/placeholder.png",
-                "alt": "Folded mode"
-              },
-              {
-                "src": "images/products/placeholder.png",
-                "alt": "Unfolded mode"
-              }
             ]
           },
           {
@@ -407,7 +397,7 @@
       "title": "HMI Display",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/hmi-display.png",
+        "src": "images/products/hmi-display_detail.png",
         "alt": "HMI Display"
       },
       "featureTable": {
@@ -898,7 +888,7 @@
       "title": "ChargeRex Home Charger",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/ev-home-charger.png",
+        "src": "images/products/ev-home-charger_detail.png",
         "alt": "ChargeRex Home Charger"
       },
       "featureTable": {
@@ -957,7 +947,7 @@
       "title": "Portable Charger",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/portable-charger.png",
+        "src": "images/products/portable-charger_detail.png",
         "alt": "Portable Charger"
       },
       "featureTable": {
@@ -1009,7 +999,7 @@
       "title": "CV1-DRT",
       "background": "#0A1324",
       "heroImage": {
-        "src": "images/products/cv1-drt-ai-assistant.png",
+        "src": "images/products/cv1-drt-ai-assistant_detail.png",
         "alt": "CV1-DRT"
       }
     },

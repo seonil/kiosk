@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Page } from '../types';
 import Header from './Header';
 
@@ -8,6 +8,7 @@ interface AirPurifierSolutionDetailScreenProps {
 
 const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenProps> = ({ setPage }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleBack = () => {
     window.history.back();
@@ -50,13 +51,26 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
       />
 
       <video
-        key={Date.now()}
+        ref={videoRef}
         autoPlay
+        preload="auto"
         loop
         muted
         playsInline
         poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
-        onLoadedData={() => setIsVideoLoaded(true)}
+        onLoadedMetadata={() => {
+          const el = videoRef.current;
+          if (el) {
+            el.currentTime = 0.12; // skip initial black frames
+          }
+        }}
+        onCanPlay={() => {
+          const el = videoRef.current;
+          if (el) {
+            el.play().catch(() => {});
+          }
+          setIsVideoLoaded(true);
+        }}
         style={{
           position: 'absolute',
           bottom: '-100px',
@@ -66,7 +80,14 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
           objectFit: 'cover',
           zIndex: 0,
           opacity: isVideoLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in'
+          visibility: isVideoLoaded ? 'visible' : 'hidden',
+          transition: 'opacity 0.2s ease-out',
+          willChange: 'opacity',
+          background: 'transparent',
+          border: 'none',
+          outline: 'none',
+          display: 'block',
+          overflow: 'hidden'
         }}
       >
         <source src={`images/airpurifier.webm?v=${Date.now()}`} type="video/webm" />

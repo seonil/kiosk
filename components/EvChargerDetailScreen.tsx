@@ -51,13 +51,18 @@ const EvChargerDetailScreen: React.FC<EvChargerDetailScreenProps> = ({ setPage }
           left: 0,
           width: '1144px',
           height: 'auto',
-          objectFit: 'cover',
-          zIndex: 1,
-          opacity: isVideoLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in',
-          background: '#000'
-        }}
-      >
+        objectFit: 'cover',
+        zIndex: 1,
+        opacity: isVideoLoaded ? 1 : 0,
+        transition: 'opacity 0.3s ease-in',
+        background: 'transparent',
+        border: 'none',
+        outline: 'none',
+        display: 'block',
+        overflow: 'hidden',
+        clipPath: 'inset(0 1px 0 0)'
+      }}
+    >
         <source src={`images/ev.webm?v=${Date.now()}`} type="video/webm" />
       </video>
 

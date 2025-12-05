@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Page } from '../types';
 import Header from './Header';
 
@@ -7,6 +7,8 @@ interface AirPurifierSolutionDetailScreenProps {
 }
 
 const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenProps> = ({ setPage }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const handleBack = () => {
     window.history.back();
   };
@@ -52,6 +54,8 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
         loop
         muted
         playsInline
+        poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
+        onLoadedData={() => setIsVideoLoaded(true)}
         style={{
           position: 'absolute',
           bottom: '-100px',
@@ -59,7 +63,10 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
           width: 'auto',
           height: 'auto',
           objectFit: 'cover',
-          zIndex: 0
+          zIndex: 0,
+          opacity: isVideoLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in',
+          background: '#000'
         }}
       >
         <source src={`images/airpurifier.webm?v=${Date.now()}`} type="video/webm" />

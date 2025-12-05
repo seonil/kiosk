@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Page } from '../types';
 import Header from './Header';
 
@@ -7,6 +7,8 @@ interface EvChargerDetailScreenProps {
 }
 
 const EvChargerDetailScreen: React.FC<EvChargerDetailScreenProps> = ({ setPage }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const handleBack = () => {
     window.history.back();
   };
@@ -41,6 +43,8 @@ const EvChargerDetailScreen: React.FC<EvChargerDetailScreenProps> = ({ setPage }
         loop
         muted
         playsInline
+        poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
+        onLoadedData={() => setIsVideoLoaded(true)}
         style={{
           position: 'absolute',
           bottom: 0,
@@ -48,7 +52,10 @@ const EvChargerDetailScreen: React.FC<EvChargerDetailScreenProps> = ({ setPage }
           width: '1144px',
           height: 'auto',
           objectFit: 'cover',
-          zIndex: 1
+          zIndex: 1,
+          opacity: isVideoLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in',
+          background: '#000'
         }}
       >
         <source src={`images/ev.webm?v=${Date.now()}`} type="video/webm" />

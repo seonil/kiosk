@@ -10,6 +10,7 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isToggleOn, setIsToggleOn] = useState(false);
   const [opacity, setOpacity] = useState(1);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const handleBack = () => {
     window.history.back();
@@ -95,10 +96,10 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
           right: '200px',
           width: '200px',
           height: '100px',
-          backgroundColor: isToggleOn ? '#10B981' : '#9CA3AF',
+          background: isToggleOn ? 'linear-gradient(270deg, #3C00FF 0%, #FFF 100%)' : '#9CA3AF',
           borderRadius: '50px',
           cursor: 'pointer',
-          transition: 'background-color 0.3s ease',
+          transition: 'background 0.3s ease',
           zIndex: 1000,
           display: 'flex',
           alignItems: 'center',
@@ -135,10 +136,14 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
         >
           <div
             style={{
-              color: '#09294A',
+              color: '#3C00FF',
+              textAlign: 'right',
+              fontSize: '30px',
+              fontStyle: 'normal',
+              fontWeight: '500',
+              lineHeight: '130%',
+              letterSpacing: '-0.3px',
               fontFamily: '"Albert Sans"',
-              fontSize: '22px',
-              fontWeight: '600',
               whiteSpace: 'nowrap'
             }}
           >
@@ -172,10 +177,12 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
       <video
         ref={videoRef}
         src={isToggleOn ? "images/showcase-cockpit_bottom.webm" : "images/showcase-cockpit_top.webm"}
+        poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
         autoPlay
         muted
         playsInline
         key={isToggleOn ? "bottom" : "top"}
+        onLoadedData={() => setIsVideoLoaded(true)}
         style={{
           position: 'absolute',
           top: '283px',
@@ -184,8 +191,9 @@ const DigitalCockpitDetailScreen: React.FC<DigitalCockpitDetailScreenProps> = ({
           width: '100%',
           height: 'auto',
           pointerEvents: 'none',
-          opacity: opacity,
-          transition: 'opacity 0.3s ease'
+          opacity: isVideoLoaded ? opacity : 0,
+          transition: 'opacity 0.3s ease',
+          background: '#000'
         }}
       />
     </div>

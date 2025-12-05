@@ -66,11 +66,13 @@ const subsidiaries: SubsidiaryContent[] = [
 const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) => {
   const [currentSubsidiary, setCurrentSubsidiary] = useState<SubsidiaryId>('overview');
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const content = subsidiaries.find(s => s.id === currentSubsidiary) || subsidiaries[0];
 
   useEffect(() => {
+    setIsVideoLoaded(false);
     if (videoRef.current) {
       videoRef.current.load();
       videoRef.current.play();
@@ -188,22 +190,33 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
           right: '60px',
           width: '1072px',
           height: '617px',
+          overflow: 'hidden',
+          borderRadius: '24px',
+          backgroundColor: '#000',
         }}
         onClick={handlePlayClick}
       >
         <video
           ref={videoRef}
           src={content.videoUrl}
+          poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
           autoPlay
           muted
           playsInline
           preload="auto"
           style={{
-            width: '1072px',
-            height: '617px',
+            width: '110%',
+            height: '110%',
             objectFit: 'cover',
-            borderRadius: '24px',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            opacity: isVideoLoaded ? 1 : 0,
+            transition: 'opacity 0.3s ease-in',
+            background: '#000',
           }}
+          onLoadedData={() => setIsVideoLoaded(true)}
           onEnded={() => setIsPlaying(false)}
         />
         {!isPlaying && (

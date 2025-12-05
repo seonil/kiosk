@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Page } from '../types';
 import Header from './Header';
 
@@ -7,6 +7,8 @@ interface Cv1DrtScreenProps {
 }
 
 const Cv1DrtScreen: React.FC<Cv1DrtScreenProps> = ({ setPage }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
     <div
       className="w-full h-full flex flex-col justify-center items-center relative"
@@ -39,20 +41,26 @@ const Cv1DrtScreen: React.FC<Cv1DrtScreenProps> = ({ setPage }) => {
             height: '720px',
             borderRadius: '24px',
             overflow: 'hidden',
-            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)'
+            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
+            backgroundColor: '#000'
           }}
         >
           <video
             src="videos/mtr.mp4"
+            poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
+            onLoadedData={() => setIsVideoLoaded(true)}
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover'
+              objectFit: 'cover',
+              opacity: isVideoLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease-in',
+              background: '#000'
             }}
           />
         </div>

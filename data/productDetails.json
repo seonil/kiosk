@@ -17,7 +17,7 @@
               "Haptic"
             ],
             "details": [
-              "LCD touch haptic provides precise tactile feedback for intuitive interaction with the climate system."
+              "<strong>LCD touch haptic</strong> provides precise tactile feedback for intuitive interaction with the climate system."
             ]
           },
           {
@@ -25,7 +25,7 @@
               "OTA (Over The Air)"
             ],
             "details": [
-              "Supports wireless software updates so the controller always runs the latest UI and HVAC logics."
+              "Supports <strong>wireless software updates</strong> so the controller always runs the latest UI and HVAC logics."
             ]
           },
           {
@@ -33,7 +33,7 @@
               "Dual / Tri-zone Control"
             ],
             "details": [
-              "Independent climate control for the driver, front passenger, and rear seats."
+              "<strong>Independent climate control</strong> for the driver, front passenger, and rear seats."
             ]
           }
         ]
@@ -64,7 +64,7 @@
               "Audio & Entertainment"
             ],
             "details": [
-              "AM/FM Radio, audio control, AUX input, hands-free communication with echo/noise reduction, Dead Reckoning GPS."
+              "AM/FM Radio, audio control, AUX input, <strong>hands-free communication</strong> with echo/noise reduction, <strong>Dead Reckoning GPS</strong>."
             ]
           },
           {
@@ -72,7 +72,7 @@
               "Smartphone Integration"
             ],
             "details": [
-              "Wired/Wireless Apple CarPlay and Android Auto for seamless phone connectivity."
+              "<strong>Wired/Wireless Apple CarPlay and Android Auto</strong> for seamless phone connectivity."
             ]
           },
           {
@@ -80,7 +80,7 @@
               "Connectivity & Interface"
             ],
             "details": [
-              "Bluetooth, Wi-Fi, and USB for media, charging, and contact sync. Hands-free voice commands with an intuitive touch UI."
+              "<strong>Bluetooth, Wi-Fi, and USB</strong> for media, charging, and contact sync. <strong>Hands-free voice commands</strong> with an intuitive touch UI."
             ]
           },
           {
@@ -88,7 +88,7 @@
               "Certifications"
             ],
             "details": [
-              "Complies with AUTOSAR, A-SPICE, and Cyber Security standards for Stellantis LATAM programs."
+              "Complies with <strong>AUTOSAR, A-SPICE, and Cyber Security standards</strong> for Stellantis LATAM programs."
             ]
           }
         ]
@@ -119,9 +119,8 @@
               "Mobility Service Integration"
             ],
             "details": [
-              "<strong>Customizable platform</strong> for ride-hailing and fleet management services.",
-              "Enables drivers to <strong>accept and manage ride requests directly</strong> through the IVI system.",
-              "Supports <strong>third-party service integration</strong> with flexible API architecture."
+              "<strong>Direct ride request management</strong> via IVI",
+              "Flexible API for third-party service integration"
             ]
           },
           {
@@ -129,42 +128,35 @@
               "Fleet-Optimized Navigation"
             ],
             "details": [
-              "<strong>Real-time traffic analysis</strong> and route optimization tailored for commercial mobility operations.",
-              "<strong>Multi-stop routing capabilities</strong> for efficient passenger pickup and drop-off.",
-              "Integration with <strong>fleet management systems</strong> for improved operational efficiency."
+              "<strong>Real-time traffic analysis</strong> and route optimization",
+              "Multi-stop routing for efficient operations"
             ]
           },
           {
             "labelLines": [
-              "Digital Meter & Payment",
-              "Integration"
+              "Digital Meter & Payment"
             ],
             "details": [
-              "Fully integrated <strong>digital fare calculation</strong> and display system.",
-              "Supports <strong>multiple payment methods</strong> including card, mobile, and digital wallets.",
-              "<strong>Automated fare reporting</strong> and transaction logging for fleet operators."
+              "<strong>Integrated digital fare calculation</strong> and display",
+              "Multiple payment methods: card, mobile, digital wallets"
             ]
           },
           {
             "labelLines": [
-              "Driver Authentication &",
-              "Fleet Management"
+              "Driver Authentication"
             ],
             "details": [
-              "Secure <strong>OE-level driver authentication</strong> and identity verification.",
-              "<strong>Fleet operator dashboard integration</strong> for vehicle and driver monitoring.",
-              "<strong>Shift management</strong> and performance tracking capabilities."
+              "<strong>OE-level driver authentication</strong>",
+              "Fleet operator dashboard for monitoring"
             ]
           },
           {
             "labelLines": [
-              "In-Vehicle Entertainment",
-              "& Comfort"
+              "Entertainment & Comfort"
             ],
             "details": [
-              "<strong>Streaming service integration</strong> for driver downtime entertainment.",
-              "<strong>Customizable content delivery</strong> based on regional requirements.",
-              "<strong>Multi-zone audio control</strong> for passenger and driver comfort."
+              "<strong>Streaming service integration</strong>",
+              "Multi-zone audio control"
             ]
           }
         ]
@@ -188,7 +180,7 @@
               "Interface (UI)"
             ],
             "details": [
-              "Themes and layouts automatically or manually adapt to driving modes and driver preferences (Eco/Sport/Comfort, etc.)."
+              "Themes and layouts <strong>automatically or manually adapt</strong> to driving modes and driver preferences (Eco/Sport/Comfort, etc.)."
             ]
           },
           {
@@ -197,7 +189,7 @@
               "Various Information"
             ],
             "details": [
-              "Consolidates navigation, media, phone, and warning information onto the instrument cluster."
+              "Consolidates <strong>navigation, media, phone, and warning information</strong> onto the instrument cluster."
             ]
           },
           {
@@ -206,8 +198,8 @@
               "& Resolution"
             ],
             "details": [
-              "Intuitive, high-resolution graphics and 3D animations.",
-              "Visibility is optimized with automatic day/night and brightness control."
+              "Intuitive, <strong>high-resolution graphics and 3D animations</strong>.",
+              "Visibility is optimized with <strong>automatic day/night and brightness control</strong>."
             ]
           },
           {
@@ -216,7 +208,7 @@
               "and Theme Designs"
             ],
             "details": [
-              "A variety of selectable virtual gauge designs, including analog, sport, and futuristic digital themes."
+              "A variety of selectable <strong>virtual gauge designs</strong>, including analog, sport, and futuristic digital themes."
             ]
           }
         ]
@@ -239,7 +231,7 @@
               "Google EDLA Certification"
             ],
             "details": [
-              "Android-based automotive infotainment platform, delivering stability and scalability."
+              "<strong>Android-based automotive infotainment platform</strong>, delivering stability and scalability."
             ]
           },
           {
@@ -247,7 +239,7 @@
               "OTT Content"
             ],
             "details": [
-              "Supports Netflix, Disney+, TVing and other OTT services for personalized entertainment."
+              "Supports <strong>Netflix, Disney+, TVing</strong> and other OTT services for personalized entertainment."
             ]
           },
           {
@@ -255,7 +247,7 @@
               "Screen Sharing"
             ],
             "details": [
-              "SerDes-based technology enables stable sharing between two RSE displays."
+              "<strong>SerDes-based technology</strong> enables stable sharing between two RSE displays."
             ]
           },
           {
@@ -263,7 +255,7 @@
               "External Device Compatibility"
             ],
             "details": [
-              "HDMI, USB and other I/O for multi-interface connectivity."
+              "<strong>HDMI, USB</strong> and other I/O for multi-interface connectivity."
             ]
           },
           {
@@ -271,7 +263,7 @@
               "Google Package App Support"
             ],
             "details": [
-              "Access to Google Play bundle, ensuring an expanding application ecosystem."
+              "Access to <strong>Google Play bundle</strong>, ensuring an expanding application ecosystem."
             ]
           }
         ]
@@ -302,9 +294,9 @@
               "System Architecture"
             ],
             "details": [
-              "VOD Server handles VOD, FOTA, NTP, seat number.",
-              "AVC Server handles attendant call and AV streaming.",
-              "Emergency power integration provides blackout mode."
+              "<strong>VOD Server</strong> handles VOD, FOTA, NTP, seat number.",
+              "<strong>AVC Server</strong> handles attendant call and AV streaming.",
+              "<strong>Emergency power integration</strong> provides blackout mode."
             ]
           },
           {
@@ -312,7 +304,7 @@
               "Two-Way Service"
             ],
             "details": [
-              "Diagnostics, FOTA (A/B update), VOD, attendant call via server connectivity."
+              "<strong>Diagnostics, FOTA (A/B update), VOD, attendant call</strong> via server connectivity."
             ]
           },
           {
@@ -321,7 +313,7 @@
             ],
             "details": [
               "Ethernet: operation info, arrival info, onboard broadcast, seat number.",
-              "Wi-Fi/AP/LTE: YouTube and internet browsing."
+              "Wi-Fi/AP/LTE: <strong>YouTube and internet browsing</strong>."
             ]
           },
           {
@@ -329,8 +321,8 @@
               "PoC Service"
             ],
             "details": [
-              "Terminal: Miracast, games, BT headset.",
-              "Server: AM, VOD content delivery / update."
+              "Terminal: <strong>Miracast, games, BT headset</strong>.",
+              "Server: AM, <strong>VOD content delivery / update</strong>."
             ]
           }
         ]
@@ -361,8 +353,8 @@
               "Foldable Display Design"
             ],
             "details": [
-              "Folding monitor maximizes cabin space and harmonizes with premium interior.",
-              "Supports multi-angle adjustment for flexible viewing."
+              "<strong>Folding monitor</strong> maximizes cabin space and harmonizes with premium interior.",
+              "Supports <strong>multi-angle adjustment</strong> for flexible viewing."
             ]
           },
           {
@@ -370,7 +362,7 @@
               "Dedicated Switches"
             ],
             "details": [
-              "POWER, OK, FOLDING, UNFOLDING switches improve usability."
+              "<strong>POWER, OK, FOLDING, UNFOLDING switches</strong> improve usability."
             ]
           },
           {
@@ -378,7 +370,7 @@
               "High Resolution"
             ],
             "details": [
-              "17.3-inch Full HD (1920×1080) panel for a premium VIP experience."
+              "<strong>17.3-inch Full HD (1920×1080) panel</strong> for a premium VIP experience."
             ]
           }
         ]
@@ -513,7 +505,7 @@
               "Face Recognition"
             ],
             "details": [
-              "Identifies the driver across different lighting / expression conditions with IR liveness detection."
+              "Identifies the driver across different lighting / expression conditions with <strong>IR liveness detection</strong>."
             ]
           },
           {
@@ -521,7 +513,7 @@
               "Driver Gaze Tracking"
             ],
             "details": [
-              "Monitors gaze direction relative to head position for forward-viewing behavior."
+              "Monitors <strong>gaze direction</strong> relative to head position for forward-viewing behavior."
             ]
           },
           {
@@ -529,7 +521,7 @@
               "Drowsiness Detection"
             ],
             "details": [
-              "Tracks eye-closure patterns to detect drowsiness in real time."
+              "Tracks <strong>eye-closure patterns</strong> to detect drowsiness in real time."
             ]
           },
           {
@@ -537,7 +529,7 @@
               "Voice Recognition"
             ],
             "details": [
-              "Supports multilingual recognition powered by OpenAI Whisper."
+              "Supports <strong>multilingual recognition</strong> powered by OpenAI Whisper."
             ]
           }
         ]
@@ -560,7 +552,7 @@
               "Autonomous Driving All-in-One"
             ],
             "details": [
-              "Converts standard vehicles into autonomous ones with small modifications using advanced sensors and NVIDIA AGX Orin controller."
+              "Converts standard vehicles into <strong>autonomous ones with small modifications</strong> using advanced sensors and <strong>NVIDIA AGX Orin controller</strong>."
             ]
           },
           {
@@ -568,7 +560,7 @@
               "Operational Efficiency"
             ],
             "details": [
-              "Maximizes efficiency for airports, ports, and other specialized environments."
+              "Maximizes efficiency for <strong>airports, ports, and other specialized environments</strong>."
             ]
           }
         ]
@@ -613,7 +605,7 @@
               "Function"
             ],
             "details": [
-              "Integrated HW/SW platform for industrial and logistics vehicles, combining perception, control, and decision modules."
+              "<strong>Integrated HW/SW platform</strong> for industrial and logistics vehicles, combining perception, control, and decision modules."
             ]
           },
           {
@@ -621,7 +613,7 @@
               "Processor / MCU"
             ],
             "details": [
-              "NVIDIA Jetson AGX Orin SOM, Infineon Aurix MCU, ASIL-level safety per ISO."
+              "<strong>NVIDIA Jetson AGX Orin SOM</strong>, Infineon Aurix MCU, <strong>ASIL-level safety</strong> per ISO."
             ]
           },
           {
@@ -629,7 +621,7 @@
               "Networking"
             ],
             "details": [
-              "1GbE ×3, 10GbE ×1, internal Orin SOM–MCU comms without external wiring."
+              "<strong>1GbE ×3, 10GbE ×1</strong>, internal Orin SOM–MCU comms without external wiring."
             ]
           },
           {
@@ -637,7 +629,7 @@
               "External Peripheral"
             ],
             "details": [
-              "USB-A Host, USB-A Download, USB-C, UART, CAN FD ×10CH."
+              "<strong>USB-A Host, USB-A Download, USB-C, UART, CAN FD ×10CH</strong>."
             ]
           },
           {
@@ -668,7 +660,7 @@
               "AV/AVN Connectivity"
             ],
             "details": [
-              "Wi-Fi pairing enables real-time viewing and easier configuration."
+              "<strong>Wi-Fi pairing</strong> enables real-time viewing and easier configuration."
             ]
           },
           {
@@ -676,7 +668,7 @@
               "HDR"
             ],
             "details": [
-              "Multi-exposure blending provides clear video in high-contrast environments."
+              "<strong>Multi-exposure blending</strong> provides clear video in high-contrast environments."
             ]
           },
           {
@@ -684,7 +676,7 @@
               "Protection"
             ],
             "details": [
-              "Battery protection and temperature cut-off guard against extreme conditions."
+              "<strong>Battery protection and temperature cut-off</strong> guard against extreme conditions."
             ]
           },
           {
@@ -692,7 +684,7 @@
               "Timelapse / Hyperlapse"
             ],
             "details": [
-              "Compressed recording for extended parking surveillance."
+              "<strong>Compressed recording</strong> for extended parking surveillance."
             ]
           },
           {
@@ -700,7 +692,7 @@
               "Auto Night Vision"
             ],
             "details": [
-              "Optimizes gain and reduces noise for clear night footage."
+              "Optimizes gain and reduces noise for <strong>clear night footage</strong>."
             ]
           }
         ]
@@ -731,7 +723,7 @@
               "360° Camera View"
             ],
             "details": [
-              "Four wide-angle cameras provide comprehensive bird's-eye view for enhanced vehicle visibility."
+              "<strong>Four wide-angle cameras</strong> provide comprehensive bird's-eye view for enhanced vehicle visibility."
             ]
           },
           {
@@ -740,8 +732,8 @@
               "Processing"
             ],
             "details": [
-              "Advanced stitching technology creates seamless panoramic view around the vehicle.",
-              "Automatic calibration and distortion correction for accurate representation."
+              "<strong>Advanced stitching technology</strong> creates seamless panoramic view around the vehicle.",
+              "<strong>Automatic calibration and distortion correction</strong> for accurate representation."
             ]
           },
           {
@@ -749,7 +741,7 @@
               "Safety Features"
             ],
             "details": [
-              "Moving object detection alerts for improved parking safety.",
+              "<strong>Moving object detection alerts</strong> for improved parking safety.",
               "Guidelines and distance markers for precise maneuvering."
             ]
           },
@@ -758,7 +750,7 @@
               "Display Integration"
             ],
             "details": [
-              "Multiple view modes: 360°, split view, and single camera perspectives.",
+              "<strong>Multiple view modes</strong>: 360°, split view, and single camera perspectives.",
               "Seamless integration with vehicle infotainment system."
             ]
           }
@@ -782,7 +774,7 @@
               "Customizable UI"
             ],
             "details": [
-              "Themes adapt to driving modes (Eco/Sport/Comfort) or driver preferences."
+              "Themes adapt to <strong>driving modes (Eco/Sport/Comfort)</strong> or driver preferences."
             ]
           },
           {
@@ -790,7 +782,7 @@
               "Integrated Information"
             ],
             "details": [
-              "Displays navigation, media, phone, and warnings."
+              "Displays <strong>navigation, media, phone, and warnings</strong>."
             ]
           },
           {
@@ -798,7 +790,7 @@
               "Graphics & Resolution"
             ],
             "details": [
-              "High-resolution 3D animations with automatic day/night control."
+              "<strong>High-resolution 3D animations</strong> with automatic day/night control."
             ]
           },
           {
@@ -806,7 +798,7 @@
               "Virtual Gauge Designs"
             ],
             "details": [
-              "Analog, sport, and futuristic digital themes."
+              "<strong>Analog, sport, and futuristic digital themes</strong>."
             ]
           }
         ]
@@ -837,7 +829,7 @@
               "Kakao Taxi Driver Service"
             ],
             "details": [
-              "Drivers accept ride requests directly on IVI, enhancing convenience."
+              "Drivers accept <strong>ride requests directly on IVI</strong>, enhancing convenience."
             ]
           },
           {
@@ -845,7 +837,7 @@
               "TMAP Navigation"
             ],
             "details": [
-              "Taxi-optimized IVI navigation with real-time traffic."
+              "<strong>Taxi-optimized IVI navigation</strong> with real-time traffic."
             ]
           },
           {
@@ -853,7 +845,7 @@
               "Taxi Meter Integration"
             ],
             "details": [
-              "Digital meter with fare display and card payment integration."
+              "<strong>Digital meter with fare display</strong> and card payment integration."
             ]
           },
           {
@@ -861,7 +853,7 @@
               "42dot Driver Authentication"
             ],
             "details": [
-              "OE-level authentication for secure operations."
+              "<strong>OE-level authentication</strong> for secure operations."
             ]
           },
           {
@@ -869,7 +861,7 @@
               "OTT Streaming (HYUNDAI TV+)"
             ],
             "details": [
-              "FAST-type streaming for news and entertainment during breaks."
+              "<strong>FAST-type streaming</strong> for news and entertainment during breaks."
             ]
           }
         ]
@@ -920,7 +912,7 @@
               "Fully Connected"
             ],
             "details": [
-              "Mobile App Control and Cloud Server Integration for smart charging management."
+              "<strong>Mobile App Control and Cloud Server Integration</strong> for smart charging management."
             ]
           },
           {
@@ -928,7 +920,7 @@
               "Load Balancing"
             ],
             "details": [
-              "Active load balancing (DSMR compliant) and static modes for safe charging."
+              "<strong>Active load balancing (DSMR compliant)</strong> and static modes for safe charging."
             ]
           },
           {
@@ -936,7 +928,7 @@
               "Mobile App"
             ],
             "details": [
-              "BLE/Wi-Fi support. In-house ChargeRex app on App Store and Google Play."
+              "<strong>BLE/Wi-Fi support</strong>. In-house ChargeRex app on App Store and Google Play."
             ]
           }
         ]
@@ -980,7 +972,7 @@
               "Multi-Layer Protection"
             ],
             "details": [
-              "Overcurrent, overvoltage/undervoltage, and leakage current protection for comprehensive safety."
+              "<strong>Overcurrent, overvoltage/undervoltage, and leakage current protection</strong> for comprehensive safety."
             ]
           },
           {
@@ -988,7 +980,7 @@
               "User-Friendly Handle Design"
             ],
             "details": [
-              "Ergonomic handle for easy portability and convenient handling."
+              "<strong>Ergonomic handle</strong> for easy portability and convenient handling."
             ]
           }
         ]

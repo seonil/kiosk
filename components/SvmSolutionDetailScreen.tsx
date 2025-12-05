@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Page } from '../types';
 import Header from './Header';
 
@@ -7,6 +7,8 @@ interface SvmSolutionDetailScreenProps {
 }
 
 const SvmSolutionDetailScreen: React.FC<SvmSolutionDetailScreenProps> = ({ setPage }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const handleBack = () => {
     window.history.back();
   };
@@ -26,6 +28,8 @@ const SvmSolutionDetailScreen: React.FC<SvmSolutionDetailScreenProps> = ({ setPa
         autoPlay
         muted
         playsInline
+        poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
+        onLoadedData={() => setIsVideoLoaded(true)}
         style={{
           position: 'absolute',
           top: 0,
@@ -33,7 +37,10 @@ const SvmSolutionDetailScreen: React.FC<SvmSolutionDetailScreenProps> = ({ setPa
           width: '1420px',
           height: 'auto',
           objectFit: 'cover',
-          zIndex: 1
+          zIndex: 1,
+          opacity: isVideoLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in',
+          background: '#000'
         }}
         onLoadedMetadata={(e) => {
           e.currentTarget.playbackRate = 0.7;

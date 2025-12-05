@@ -131,7 +131,7 @@ const Rse25DetailScreen: React.FC<Rse25DetailScreenProps> = ({ setPage }) => {
               style={{
                 color: 'white',
                 fontFamily: '"Albert Sans"',
-                fontSize: '22px',
+                fontSize: '30px',
                 fontWeight: '600',
                 marginBottom: '8px',
                 whiteSpace: 'nowrap'

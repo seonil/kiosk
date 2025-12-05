@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ setPage, onBack, variant = 'default' })
   const homeImage = variant === 'white' ? 'images/btn-home-white.png' : 'images/btn-home.png';
 
   return (
-    <header className="absolute top-0 left-0 right-0 p-8 flex justify-between items-center z-10">
+    <header className="absolute top-0 left-0 right-0 p-8 flex justify-between items-center z-50">
       <button
         onClick={onBack}
         className="cursor-pointer transition-all duration-300 hover:opacity-80"

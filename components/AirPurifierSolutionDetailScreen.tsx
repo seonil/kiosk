@@ -50,6 +50,7 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
       />
 
       <video
+        key={Date.now()}
         autoPlay
         loop
         muted

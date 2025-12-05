@@ -27,6 +27,7 @@ const SmartCarpetDetailScreen: React.FC<SmartCarpetDetailScreenProps> = ({ setPa
       <Header setPage={setPage} onBack={handleBack} variant="white" />
 
       <video
+        key={Date.now()}
         autoPlay
         loop
         muted

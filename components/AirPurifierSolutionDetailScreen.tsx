@@ -61,13 +61,12 @@ const AirPurifierSolutionDetailScreen: React.FC<AirPurifierSolutionDetailScreenP
           position: 'absolute',
           bottom: '-100px',
           right: 0,
-          width: 'auto',
+          width: '1144px',
           height: 'auto',
           objectFit: 'cover',
           zIndex: 0,
           opacity: isVideoLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in',
-          background: '#000'
+          transition: 'opacity 0.3s ease-in'
         }}
       >
         <source src={`images/airpurifier.webm?v=${Date.now()}`} type="video/webm" />

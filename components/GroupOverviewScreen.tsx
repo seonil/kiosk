@@ -192,7 +192,6 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
           height: '617px',
           overflow: 'hidden',
           borderRadius: '24px',
-          backgroundColor: '#000',
         }}
         onClick={handlePlayClick}
       >
@@ -207,14 +206,9 @@ const GroupOverviewScreen: React.FC<GroupOverviewScreenProps> = ({ setPage }) =>
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'contain',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            objectFit: 'cover',
             opacity: isVideoLoaded ? 1 : 0,
             transition: 'opacity 0.3s ease-in',
-            background: '#000',
           }}
           onLoadedData={() => setIsVideoLoaded(true)}
           onEnded={() => setIsPlaying(false)}
